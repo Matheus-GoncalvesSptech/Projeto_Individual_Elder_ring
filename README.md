@@ -1,0 +1,3 @@
+# Elder Ring e sua História
+
+Nesse projeto... 
