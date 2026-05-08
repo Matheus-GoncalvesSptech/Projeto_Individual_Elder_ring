@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elden Ring — Cadastro</title>
+    <link rel="stylesheet" href="CSS/global.css">
+    <link rel="stylesheet" href="CSS/login_cadastro.css">
+</head>
+<body onload="listar()">
+
+    <header>
+        <div class="cabecalho-menu">
+            <div class="logo-container">
+                <div class="logo-rune">&#9775;</div>
+                <p class="nome-logo">Elden Ring</p>
+            </div>
+            <div class="menu">
+                <a href="index.html" class="opcoes-menu">Início</a>
+                <a href="index.html#chefes" class="opcoes-menu">Chefes</a>
+                <a href="sobre.html" class="opcoes-menu">Sobre</a>
+                <a href="calculadora.html" class="opcoes-menu">Runas</a>
+                <a href="login.html" class="opcoes-menu login">Entrar</a>
+            </div>
+        </div>
+    </header>
+
+    <section class="secao-autenticacao">
+        <div class="caixa-formulario">
+
+            <div class="abas-formulario">
+                <a href="login.html" class="aba">Entrar</a>
+                <a href="cadastro.html" class="aba ativa">Registrar</a>
+            </div>
+
+            <h2 class="titulo-formulario">Criar Personagem</h2>
+            <p class="subtitulo-formulario">Registre seu nome nas crônicas das Terras Intermédias</p>
+
+            <!-- Caixa de erro (igual ao padrão da API) -->
+            <div id="cardErro" style="display:none; color: #c03020; margin-bottom: 12px;">
+                <span id="mensagem_erro"></span>
+            </div>
+
+            <div class="campos-duplos">
+                <div class="grupo-campo">
+                    <label for="ipt_nome">Nome</label>
+                    <input type="text" id="ipt_nome" placeholder="Seu nome">
+                </div>
+                <div class="grupo-campo">
+                    <label for="ipt_sobrenome">Sobrenome</label>
+                    <input type="text" id="ipt_sobrenome" placeholder="Seu sobrenome">
+                </div>
+            </div>
+
+            <div class="grupo-campo">
+                <label for="ipt_email">Email</label>
+                <input type="email" id="ipt_email" placeholder="seu@email.com">
+            </div>
+
+            <div class="grupo-campo">
+                <label for="ipt_senha">Senha</label>
+                <input type="password" id="ipt_senha" placeholder="**********" oninput="verificarSenha()">
+                <div id="aviso_senha" class="aviso-senha"></div>
+            </div>
+
+            <div class="grupo-campo">
+                <label for="ipt_conf_senha">Confirmar Senha</label>
+                <input type="password" id="ipt_conf_senha" placeholder="*********">
+            </div>
+
+            <button class="btn-enviar" onclick="cadastrar()">Iniciar Jornada</button>
+
+            <div id="msg_sucesso"></div>
+
+            <p class="link-alterno">Já tem uma conta? <a href="login.html">Faça login</a></p>
+
+        </div>
+    </section>
+
+    <script>
+        // Lista de empresas cadastradas (usada para validar o código de ativação, se necessário)
+        let listaEmpresasCadastradas = [];
+
+        // Vetor que guarda os erros encontrados antes de enviar o formulário
+        var erros = [];
+
+        // Verifica a força da senha enquanto o usuário digita
+        function verificarSenha() {
+            var senha = document.getElementById('ipt_senha').value;
+            var aviso = document.getElementById('aviso_senha');
+
+            if (senha == '') {
+                aviso.innerHTML = '';
+            } else if (senha.length < 6) {
+                aviso.innerHTML = '<span style="color:#c03020">⚠ Senha fraca — mínimo 6 caracteres</span>';
+            } else if (senha.length < 10) {
+                aviso.innerHTML = '<span style="color:#e07030">~ Senha média</span>';
+            } else {
+                aviso.innerHTML = '<span style="color:#7ab87a">✓ Senha forte</span>';
+            }
+        }
+
+        function cadastrar() {
+            var nomeVar = document.getElementById('ipt_nome').value.trim();
+            var sobrenomeVar = document.getElementById('ipt_sobrenome').value.trim();
+            var emailVar = document.getElementById('ipt_email').value.trim();
+            var senhaVar = document.getElementById('ipt_senha').value.trim();
+            var confSenhaVar = document.getElementById('ipt_conf_senha').value.trim();
+
+            // Limpa os erros anteriores e verifica cada campo
+            erros = [];
+
+            if (nomeVar == "") erros.push("O campo Nome é obrigatório.");
+            if (sobrenomeVar == "") erros.push("O campo Sobrenome é obrigatório.");
+            if (emailVar == "") erros.push("O campo Email é obrigatório.");
+            if (senhaVar == "") erros.push("O campo Senha é obrigatório.");
+            if (confSenhaVar == "") erros.push("O campo Confirmar Senha é obrigatório.");
+            if (senhaVar != "" && senhaVar.length < 6) erros.push("A senha deve ter pelo menos 6 caracteres.");
+            if (senhaVar != "" && confSenhaVar != "" && senhaVar != confSenhaVar) erros.push("As senhas não são iguais.");
+
+            // Se houver algum erro no vetor, mostra tudo na tela e para
+            if (erros.length > 0) {
+                cardErro.style.display = "block";
+                mensagem_erro.innerHTML = erros.join("<br>");
+                setInterval(sumirMensagem, 7000);
+                return false;
+            }
+
+            // Envia os dados para a API
+            fetch("/usuarios/cadastrar", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({
+                    nomeServer: nomeVar + " " + sobrenomeVar,
+                    emailServer: emailVar,
+                    senhaServer: senhaVar
+                })
+            }).then(function (resposta) {
+
+                if (resposta.ok) {
+                    // Cadastro com sucesso
+                    document.getElementById('msg_sucesso').innerHTML =
+                        '<p class="mensagem-sucesso">✓ Cadastro realizado! Sua jornada começa agora, Maculado.</p>';
+
+                    setTimeout(function () {
+                        window.location = "login.html";
+                    }, 2000);
+
+                } else {
+                    // Cadastro falhou
+                    cardErro.style.display = "block";
+                    mensagem_erro.innerHTML = "Houve um erro ao realizar o cadastro. Tente novamente.";
+                    setInterval(sumirMensagem, 5000);
+                }
+
+            }).catch(function (erro) {
+                console.log("Erro na requisição: ", erro);
+            });
+
+            return false;
+        }
+
+        // Busca as empresas cadastradas na API (para validação de código de ativação, se necessário)
+        function listar() {
+            fetch("/empresas/listar", {
+                method: "GET"
+            }).then(function (resposta) {
+                resposta.json().then(function (empresas) {
+                    empresas.forEach(function (empresa) {
+                        listaEmpresasCadastradas.push(empresa);
+                    });
+                });
+            }).catch(function (erro) {
+                console.log("Erro ao buscar empresas: ", erro);
+            });
+        }
+
+        function sumirMensagem() {
+            cardErro.style.display = "none";
+        }
+    </script>
+
+</body>
+</html>

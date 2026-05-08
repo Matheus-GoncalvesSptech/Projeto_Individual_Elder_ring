@@ -1,0 +1,187 @@
+/* ══════════════════════════════════════════
+   CALCULADORA — usado em calculadora.html
+══════════════════════════════════════════ */
+
+.hero-calculadora {
+    padding: 140px 60px 60px;
+    text-align: center;
+    border-bottom: 1px solid #2a2010;
+}
+
+.hero-calculadora h1 {
+    font-size: 42px;
+    font-weight: bold;
+    color: #c8a060;
+    letter-spacing: 3px;
+    margin-bottom: 12px;
+}
+
+.hero-calculadora p {
+    font-size: 16px;
+    font-style: italic;
+    color: #8a7a6a;
+}
+
+.area-calculadora {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 60px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 28px;
+    justify-content: center;
+}
+
+.cartao-calculadora {
+    background-color: #100d14;
+    border: 1px solid #2a2218;
+    padding: 28px;
+    flex: 1;
+    min-width: 300px;
+    max-width: 460px;
+}
+
+.cartao-calculadora.largura-total {
+    min-width: 100%;
+    max-width: 100%;
+}
+
+.cartao-calculadora h2 {
+    font-size: 20px;
+    color: #c8a060;
+    margin-bottom: 8px;
+}
+
+.cartao-calculadora > p {
+    font-size: 14px;
+    color: #8a7a6a;
+    margin-bottom: 24px;
+}
+
+.grupo-calculo {
+    margin-bottom: 16px;
+}
+
+.grupo-calculo label {
+    display: block;
+    font-size: 12px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #8a7a6a;
+    margin-bottom: 6px;
+}
+
+.grupo-calculo input {
+    width: 100%;
+    padding: 10px 12px;
+    background-color: #0a0a0a;
+    border: 1px solid #2a2218;
+    color: #e0d0b0;
+    font-size: 15px;
+    font-family: Georgia, serif;
+    outline: none;
+}
+
+.grupo-calculo input:focus {
+    border-color: #c8a060;
+}
+
+.btn-calcular {
+    width: 100%;
+    padding: 12px;
+    background-color: #c8a060;
+    color: #0a0a0a;
+    border: none;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    cursor: pointer;
+    margin-top: 8px;
+}
+
+.btn-calcular:hover {
+    background-color: #e0b870;
+}
+
+.resultado-calculo {
+    margin-top: 20px;
+    border-top: 1px solid #2a2218;
+    padding-top: 20px;
+    display: none;
+}
+
+.linha-resultado {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #1a1520;
+}
+
+.linha-resultado:last-child {
+    border-bottom: none;
+}
+
+.rotulo-resultado {
+    font-size: 13px;
+    color: #8a7a6a;
+}
+
+.valor-resultado {
+    font-size: 18px;
+    font-weight: bold;
+    color: #c8a060;
+}
+
+/* ── FARM ── */
+.lista-farm {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin-top: 20px;
+}
+
+.local-farm {
+    background-color: #0a0a0a;
+    border: 1px solid #2a2218;
+    padding: 20px;
+    transition: border-color 0.3s;
+    flex: 1;
+    min-width: 180px;
+}
+
+.local-farm:hover {
+    border-color: #c8a060;
+}
+
+.icone-farm {
+    font-size: 28px;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.local-farm h3 {
+    font-size: 14px;
+    color: #c8a060;
+    margin-bottom: 8px;
+}
+
+.local-farm p {
+    font-size: 13px;
+    color: #8a7a6a;
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+.etiqueta-farm {
+    font-size: 11px;
+    padding: 3px 8px;
+    border: 1px solid #2a2218;
+    color: #7a6040;
+}
+
+.etiqueta-farm.melhor {
+    border-color: #c8a060;
+    color: #c8a060;
+}

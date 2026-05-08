@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elden Ring — Calculadora de Runas</title>
+    <link rel="stylesheet" href="CSS/global.css">
+    <link rel="stylesheet" href="CSS/calculadora.css">
+</head>
+<body>
+
+    <header>
+        <div class="cabecalho-menu">
+            <div class="logo-container">
+                <div class="logo-rune">&#9775;</div>
+                <p class="nome-logo">Elden Ring</p>
+            </div>
+            <div class="menu">
+                <a href="index.html" class="opcoes-menu">Início</a>
+                <a href="sobre.html" class="opcoes-menu">Sobre</a>
+                <a href="calculadora.html" class="opcoes-menu">Runas</a>
+                <a href="login.html" class="opcoes-menu login">Entrar</a>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero-calculadora">
+        <span class="etiqueta-secao">Ferramentas do Maculado</span>
+        <h1>Calculadora de Runas</h1>
+        <p>Descubra quantas runas você precisa para subir de nível e planejar sua build</p>
+    </section>
+
+    <div class="area-calculadora">
+
+        <div class="cartao-calculadora">
+            <h2>⚔ Custo de Nível</h2>
+            <p>Calcule as runas necessárias para avançar seu personagem</p>
+
+            <div class="grupo-calculo">
+                <label for="nivelAtual">Nível Atual</label>
+                <input type="number" id="nivelAtual" placeholder="Ex: 50" min="1" max="712">
+            </div>
+            <div class="grupo-calculo">
+                <label for="nivelDesejado">Nível Desejado</label>
+                <input type="number" id="nivelDesejado" placeholder="Ex: 80" min="2" max="713">
+            </div>
+
+            <button class="btn-calcular" onclick="calcularRunas()">Calcular Custo</button>
+
+            <div class="resultado-calculo" id="resultadoRunas">
+                <div class="linha-resultado">
+                    <span class="rotulo-resultado">Runas necessárias</span>
+                    <span class="valor-resultado" id="totalRunas">0</span>
+                </div>
+                <div class="linha-resultado">
+                    <span class="rotulo-resultado">Níveis a ganhar</span>
+                    <span class="valor-resultado" id="totalNiveis">0</span>
+                </div>
+                <div class="linha-resultado">
+                    <span class="rotulo-resultado">Derrotas de Margit</span>
+                    <span class="valor-resultado" id="totalMargit">0x</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="cartao-calculadora">
+            <h2>🌾 Simulador de Farm</h2>
+            <p>Quanto tempo vai levar para juntar suas runas?</p>
+
+            <div class="grupo-calculo">
+                <label for="runasPorRun">Runas por run</label>
+                <input type="number" id="runasPorRun" placeholder="Ex: 5000" min="1">
+            </div>
+            <div class="grupo-calculo">
+                <label for="runasNecessarias">Runas necessárias</label>
+                <input type="number" id="runasNecessarias" placeholder="Ex: 100000" min="1">
+            </div>
+            <div class="grupo-calculo">
+                <label for="tempoPorRun">Tempo por run (minutos)</label>
+                <input type="number" id="tempoPorRun" placeholder="Ex: 3" min="1">
+            </div>
+
+            <button class="btn-calcular" onclick="calcularFarm()">Simular Farm</button>
+
+            <div class="resultado-calculo" id="resultadoFarm">
+                <div class="linha-resultado">
+                    <span class="rotulo-resultado">Número de runs</span>
+                    <span class="valor-resultado" id="totalRuns">0</span>
+                </div>
+                <div class="linha-resultado">
+                    <span class="rotulo-resultado">Tempo total</span>
+                    <span class="valor-resultado" id="tempoTotal">0h</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="cartao-calculadora largura-total">
+            <h2>💡 Melhores Locais de Farm</h2>
+            <p>Onde conseguir runas de forma eficiente</p>
+            <div class="lista-farm">
+                <div class="local-farm">
+                    <span class="icone-farm">🐴</span>
+                    <h3>Plateau de Altus — Cavaleiros</h3>
+                    <p>~6.000 runas por run rápido. Use Torrent e elimine os cavaleiros próximos ao Grace.</p>
+                    <span class="etiqueta-farm">Começo/Meio do Jogo</span>
+                </div>
+                <div class="local-farm">
+                    <span class="icone-farm">🐉</span>
+                    <h3>Mohgwyn Palace — Pássaros</h3>
+                    <p>~40.000 runas por tiro de flecha. O melhor farm do jogo com uma besta e o Shard of Alexander.</p>
+                    <span class="etiqueta-farm melhor">Melhor do Jogo/Final</span>
+                </div>
+                <div class="local-farm">
+                    <span class="icone-farm">⚔</span>
+                    <h3>Farum Azula — Dragões</h3>
+                    <p>~80.000 runas por dragão. Alto risco, alta recompensa. Indicado para personagens avançados.</p>
+                    <span class="etiqueta-farm">Fim do Jogo</span>
+                </div>
+                <div class="local-farm">
+                    <span class="icone-farm">🏺</span>
+                    <h3>Gelmir — Soldados de Lava</h3>
+                    <p>~8.000 runas por run. Fácil e seguro, ótimo para o mid game sem risco de morte.</p>
+                    <span class="etiqueta-farm">Meio do Jogo</span>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    <footer class="rodape">
+        <div class="links-rodape">
+            <div>
+                <h3 class="titulo-rodape">Navegação</h3>
+                <a href="index.html" class="opcoes-rodape">Início</a>
+                <a href="index.html#chefes" class="opcoes-rodape">Chefes</a>
+                <a href="sobre.html" class="opcoes-rodape">Sobre</a>
+                <a href="calculadora.html" class="opcoes-rodape">Calculadora</a>
+            </div>
+            <div>
+                <h3 class="titulo-rodape">Acesso</h3>
+                <a href="login.html" class="opcoes-rodape">Login</a>
+                <a href="cadastro.html" class="opcoes-rodape">Cadastro</a>
+            </div>
+        </div>
+        <div class="logo-rodape">
+            <div class="rune-grande">&#9775;</div>
+            <p class="nome-logo">Elden Ring</p>
+            <p class="slogan-rodape">Em Busca do anel Prístino</p>
+        </div>
+        <div class="informacoes-rodape">
+            <div class="bloco-informacao">
+                <h4 class="titulo-informacao">Dica</h4>
+                <p class="texto-informacao">Use o Golden Scarab para +20% de runas</p>
+            </div>
+            <div class="bloco-informacao">
+                <h4 class="titulo-informacao">Nível Máximo</h4>
+                <p class="texto-informacao">713 — Com todos atributos em 99</p>
+            </div>
+        </div>
+    </footer>
+    
+
+    <script>
+        function custoNivel(nivel) {
+            return Math.floor(0.02 * nivel * nivel * nivel + 3.06 * nivel * nivel - 1.02 * nivel + 584);
+        }
+
+        function calcularRunas() {
+            var atual = parseInt(document.getElementById('nivelAtual').value);
+            var desejado = parseInt(document.getElementById('nivelDesejado').value);
+
+            if (!atual || !desejado || atual >= desejado || atual < 1 || desejado > 713) {
+                alert('Por favor, insira níveis válidos (atual < desejado, entre 1 e 713).');
+                return;
+            }
+
+            var total = 0;
+            for (var i = atual; i < desejado; i++) {
+                total = total + custoNivel(i);
+            }
+
+            document.getElementById('totalRunas').textContent = total.toLocaleString('pt-BR');
+            document.getElementById('totalNiveis').textContent = desejado - atual;
+            document.getElementById('totalMargit').textContent = Math.ceil(total / 12000) + 'x';
+            document.getElementById('resultadoRunas').style.display = 'block';
+        }
+
+        function calcularFarm() {
+            var porRun = parseInt(document.getElementById('runasPorRun').value);
+            var necessarias = parseInt(document.getElementById('runasNecessarias').value);
+            var tempo = parseInt(document.getElementById('tempoPorRun').value);
+
+            if (!porRun || !necessarias || !tempo) {
+                alert('Preencha todos os campos!');
+                return;
+            }
+
+            var runs = Math.ceil(necessarias / porRun);
+            var minutos = runs * tempo;
+            var horas = Math.floor(minutos / 60);
+            var min = minutos % 60;
+            var runsScarab = Math.ceil(necessarias / Math.floor(porRun * 1.2));
+
+            document.getElementById('totalRuns').textContent = runs.toLocaleString('pt-BR');
+            document.getElementById('tempoTotal').textContent = horas + 'h ' + min + 'min';
+            document.getElementById('resultadoFarm').style.display = 'block';
+        }
+    </script>
+
+</body>
+</html>

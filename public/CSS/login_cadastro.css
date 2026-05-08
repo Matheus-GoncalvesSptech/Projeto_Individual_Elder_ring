@@ -1,0 +1,142 @@
+/* ══════════════════════════════════════════
+   AUTH — usado em login.html e cadastro.html
+══════════════════════════════════════════ */
+
+.secao-autenticacao {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 100px 20px 60px;
+}
+
+.caixa-formulario {
+    background-color: #100d14;
+    border: 1px solid #2a2218;
+    padding: 40px;
+    width: 100%;
+    max-width: 500px;
+}
+
+.titulo-formulario {
+    font-size: 24px;
+    font-weight: bold;
+    color: #c8a060;
+    margin-bottom: 8px;
+    letter-spacing: 2px;
+}
+
+.subtitulo-formulario {
+    font-size: 14px;
+    color: #8a7a6a;
+    margin-bottom: 30px;
+}
+
+.grupo-campo {
+    margin-bottom: 20px;
+}
+
+.grupo-campo label {
+    display: block;
+    font-size: 12px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #8a7a6a;
+    margin-bottom: 6px;
+}
+
+.grupo-campo input {
+    width: 100%;
+    padding: 10px 14px;
+    background-color: #0a0a0a;
+    border: 1px solid #2a2218;
+    color: #e0d0b0;
+    font-size: 15px;
+    font-family: Georgia, serif;
+    outline: none;
+}
+
+.grupo-campo input:focus {
+    border-color: #c8a060;
+}
+
+.campos-duplos {
+    display: flex;
+    gap: 16px;
+}
+
+.campos-duplos .grupo-campo {
+    flex: 1;
+}
+
+.btn-enviar {
+    width: 100%;
+    padding: 12px;
+    background-color: #c8a060;
+    color: #0a0a0a;
+    border: none;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.btn-enviar:hover {
+    background-color: #e0b870;
+}
+
+.link-alterno {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
+    color: #8a7a6a;
+}
+
+.link-alterno a {
+    color: #c8a060;
+}
+
+.link-alterno a:hover {
+    text-decoration: underline;
+}
+
+.abas-formulario {
+    display: flex;
+    margin-bottom: 28px;
+    border-bottom: 1px solid #2a2218;
+}
+
+.aba {
+    flex: 1;
+    padding: 10px;
+    text-align: center;
+    font-size: 13px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #8a7a6a;
+    cursor: pointer;
+    text-decoration: none;
+    display: block;
+}
+
+.aba.ativa {
+    color: #c8a060;
+    border-bottom: 2px solid #c8a060;
+}
+
+.mensagem-sucesso {
+    margin-top: 16px;
+    padding: 12px;
+    background-color: rgba(100, 160, 80, 0.1);
+    border: 1px solid #4a7a30;
+    color: #8aba60;
+    font-size: 14px;
+    text-align: center;
+}
+
+.aviso-senha {
+    font-size: 13px;
+    margin-top: 4px;
+}

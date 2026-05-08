@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elden Ring — Entrar</title>
+    <link rel="stylesheet" href="CSS/global.css">
+    <link rel="stylesheet" href="CSS/login_cadastro.css">
+</head>
+<body>
+
+    <header>
+        <div class="cabecalho-menu">
+            <div class="logo-container">
+                <div class="logo-rune">&#9775;</div>
+                <p class="nome-logo">Elden Ring</p>
+            </div>
+            <div class="menu">
+                <a href="index.html" class="opcoes-menu">Início</a>
+                <a href="sobre.html" class="opcoes-menu">Sobre</a>
+                <a href="calculadora.html" class="opcoes-menu">Runas</a>
+            </div>
+        </div>
+    </header>
+
+    <section class="secao-autenticacao">
+        <div class="caixa-formulario">
+
+            <div class="abas-formulario">
+                <a href="login.html" class="aba ativa">Entrar</a>
+                <a href="cadastro.html" class="aba">Registrar</a>
+            </div>
+
+            <h2 class="titulo-formulario">Acessar as Terras</h2>
+            <p class="subtitulo-formulario">Insira suas credenciais para continuar sua jornada</p>
+
+            <!-- Caixa de erro (igual ao padrão da API) -->
+            <div id="cardErro" style="display:none; color: #c03020; margin-bottom: 12px;">
+                <span id="mensagem_erro"></span>
+            </div>
+
+            <div class="grupo-campo">
+                <label for="ipt_email">Email</label>
+                <input type="email" id="ipt_email" placeholder="seu@email.com">
+            </div>
+
+            <div class="grupo-campo">
+                <label for="ipt_senha">Senha</label>
+                <input type="password" id="ipt_senha" placeholder="••••••••">
+            </div>
+
+            <button class="btn-enviar" onclick="entrar()">Entrar nas Terras</button>
+
+            <p class="link-alterno">Ainda não tem conta? <a href="cadastro.html">Registre-se</a></p>
+
+        </div>
+    </section>
+
+    <script>
+        function entrar() {
+            var emailVar = document.getElementById('ipt_email').value;
+            var senhaVar = document.getElementById('ipt_senha').value;
+
+            // Verifica se os campos estão em branco
+            if (emailVar == "" || senhaVar == "") {
+                cardErro.style.display = "block";
+                mensagem_erro.innerHTML = "Preencha todos os campos antes de continuar.";
+                setInterval(sumirMensagem, 5000);
+                return false;
+            }
+
+            // Envia os dados para a API
+            fetch("/usuarios/autenticar", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({
+                    emailServer: emailVar,
+                    senhaServer: senhaVar
+                })
+            }).then(function (resposta) {
+
+                if (resposta.ok) {
+                    // Login com sucesso — salva os dados do usuário
+                    resposta.json().then(json => {
+                        sessionStorage.EMAIL_USUARIO = json.email;
+                        sessionStorage.NOME_USUARIO = json.nome;
+                        sessionStorage.ID_USUARIO = json.id;
+
+                        alert("Graça restaurada! Sua jornada pode continuar.");
+
+                        setTimeout(function () {
+                            window.location = "index.html";
+                        }, 1000);
+                    });
+
+                } else {
+                    // Login falhou — mostra mensagem de erro
+                    resposta.text().then(texto => {
+                        cardErro.style.display = "block";
+                        mensagem_erro.innerHTML = "Credenciais inválidas. Verifique seu email e senha.";
+                        setInterval(sumirMensagem, 5000);
+                    });
+                }
+
+            }).catch(function (erro) {
+                console.log("Erro na requisição: ", erro);
+            });
+
+            return false;
+        }
+
+        function sumirMensagem() {
+            cardErro.style.display = "none";
+        }
+    </script>
+
+</body>
+</html>

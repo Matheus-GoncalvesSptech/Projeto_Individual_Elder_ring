@@ -1,0 +1,242 @@
+/* ══════════════════════════════════════════
+   GLOBAL — usado em TODAS as páginas
+══════════════════════════════════════════ */
+
+/* ── RESET GERAL ── */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Georgia, serif;
+    background-color: #0a0a0a;
+    color: #e0d0b0;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* ── CABECALHO ── */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    background-color: rgba(5, 3, 2, 0.92);
+    border-bottom: 1px solid #5a4a20;
+}
+
+.cabecalho-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo-rune {
+    font-size: 24px;
+    color: #c8a060;
+}
+
+.nome-logo {
+    font-size: 18px;
+    font-weight: bold;
+    color: #c8a060;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.menu {
+    display: flex;
+    gap: 28px;
+    align-items: center;
+}
+
+.opcoes-menu {
+    font-size: 13px;
+    color: #eeebe8;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: color 0.2s;
+}
+
+.opcoes-menu:hover {
+    color: #c8a060;
+}
+
+.opcoes-menu.login {
+    background-color: #c8a060;
+    color: #0a0a0a;
+    padding: 7px 18px;
+    font-weight: bold;
+}
+
+.opcoes-menu.login:hover {
+    background-color: #e0b870;
+    color: #0a0a0a;
+}
+
+/* ── BOTÕES ── */
+.btn-primario {
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 14px 36px;
+    background-color: #c8a060;
+    color: #0a0a0a;
+    display: inline-block;
+    transition: background-color 0.2s;
+}
+
+.btn-primario:hover {
+    background-color: #e0b870;
+}
+
+.btn-secundario {
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 14px 36px;
+    color: #c8a060;
+    border: 1px solid #5a4a20;
+    display: inline-block;
+    transition: background-color 0.2s;
+}
+
+.btn-secundario:hover {
+    background-color: rgba(200, 160, 96, 0.1);
+}
+
+/* ── CABECALHO DE SEÇÃO (compartilhado) ── */
+.cabecalho-secao {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.etiqueta-secao {
+    font-size: 11px;
+    letter-spacing: 4px;
+    color: #7a6040;
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.titulo-secao {
+    font-size: 36px;
+    font-weight: bold;
+    color: #c8a060;
+    letter-spacing: 3px;
+    margin-bottom: 14px;
+}
+
+.subtitulo-secao {
+    font-size: 16px;
+    color: #8a7a6a;
+    font-style: italic;
+}
+
+/* ── RODAPÉ ── */
+.rodape {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    padding: 50px 60px;
+    border-top: 1px solid #2a2010;
+    background-color: #050302;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.links-rodape {
+    display: flex;
+    gap: 50px;
+}
+
+.titulo-rodape {
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: #c8a060;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+}
+
+.opcoes-rodape {
+    display: block;
+    margin: 8px 0;
+    font-size: 14px;
+    color: #8a7a6a;
+    transition: color 0.2s;
+}
+
+.opcoes-rodape:hover {
+    color: #c8a060;
+}
+
+.logo-rodape {
+    text-align: center;
+}
+
+.rune-grande {
+    font-size: 44px;
+    color: #c8a060;
+}
+
+.slogan-rodape {
+    font-size: 11px;
+    letter-spacing: 4px;
+    color: #7a6040;
+    text-transform: uppercase;
+    margin-top: 6px;
+}
+
+.informacoes-rodape {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    max-width: 300px;
+}
+
+.bloco-informacao {
+    width: 45%;
+}
+
+.titulo-informacao {
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: #7a6040;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+}
+
+.texto-informacao {
+    font-size: 13px;
+    color: #8a7a6a;
+    line-height: 1.5;
+}
+
+.direitos {
+    text-align: center;
+    padding: 16px;
+    font-size: 12px;
+    color: #4a3a20;
+    border-top: 1px solid #1a1510;
+    background-color: #050302;
+}

@@ -1,0 +1,126 @@
+/* ══════════════════════════════════════════
+   SOBRE — usado em sobre.html
+══════════════════════════════════════════ */
+
+.hero-sobre {
+    padding: 140px 60px 80px;
+    text-align: center;
+    border-bottom: 1px solid #2a2010;
+}
+
+.hero-sobre h1 {
+    font-size: 48px;
+    font-weight: bold;
+    color: #c8a060;
+    letter-spacing: 4px;
+    margin-bottom: 14px;
+}
+
+.hero-sobre p {
+    font-size: 17px;
+    font-style: italic;
+    color: #8a7a6a;
+}
+
+.bloco-informativo {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    padding: 60px;
+    max-width: 1100px;
+    margin: 0 auto;
+    border-bottom: 1px solid #2a2010;
+}
+
+.bloco-informativo.invertido {
+    flex-direction: row-reverse;
+}
+
+.placeholder-imagem {
+    width: 180px;
+    height: 180px;
+    background-color: #1a1520;
+    border: 1px solid #2a2218;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 48px;
+}
+
+.imagem-bloco {
+    width: 260px;
+    height: 200px;
+    object-fit: cover;
+    border: 1px solid #2a2218;
+    border-radius: 4px;
+}
+
+.imagem-bloco.logo {
+    object-fit: contain;
+    background-color: #1a1520;
+    padding: 16px;
+}
+
+.texto-bloco h4 {
+    font-size: 22px;
+    color: #c8a060;
+    margin-bottom: 14px;
+}
+
+.texto-bloco p {
+    font-size: 16px;
+    line-height: 1.75;
+    color: #8a7a6a;
+    margin-bottom: 12px;
+}
+
+.rotulo-bloco {
+    font-size: 11px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #7a6040;
+    display: block;
+    margin-bottom: 8px;
+}
+
+/* ── PREMIAÇÕES ── */
+.secao-premiacoes {
+    padding: 60px;
+    max-width: 1100px;
+    margin: 0 auto;
+    border-bottom: 1px solid #2a2010;
+}
+
+.lista-premiacoes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    margin-top: 40px;
+    justify-content: center;
+}
+
+.cartao-premiacao {
+    background-color: #100d14;
+    border: 1px solid #2a2218;
+    padding: 28px;
+    transition: border-color 0.3s;
+    flex: 1;
+    min-width: 260px;
+    max-width: 340px;
+}
+
+.cartao-premiacao:hover {
+    border-color: #c8a060;
+}
+
+.cartao-premiacao h2 {
+    font-size: 20px;
+    color: #c8a060;
+    margin-bottom: 10px;
+}
+
+.cartao-premiacao p {
+    font-size: 15px;
+    line-height: 1.7;
+    color: #8a7a6a;
+}

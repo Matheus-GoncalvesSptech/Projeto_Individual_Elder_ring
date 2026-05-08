@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elden Ring — The Lands Between</title>
+    <link rel="stylesheet" href="CSS/index.css">
+    <link rel="stylesheet" href="CSS/global.css">
+</head>
+<body>
+
+    <header id="home">
+        <div class="cabecalho-menu">
+            <div class="logo-container">
+                <div class="logo-rune">&#9775;</div>
+                <p class="nome-logo">Elden Ring</p>
+            </div>
+            <div class="menu">
+                <a href="#home" class="opcoes-menu">Início</a>
+                <a href="#chefes" class="opcoes-menu">Chefes</a>
+                <a href="#jornada" class="opcoes-menu">Minha Jornada</a>
+                <a href="sobre.html" class="opcoes-menu">Sobre</a>
+                <a href="calculadora.html" class="opcoes-menu">Runas</a>
+                <a href="dashboard.html" class="opcoes-menu">DashBoard</a>
+                <a href="login.html" class="opcoes-menu login">Entrar</a>
+                
+            </div>
+        </div>
+    </header>
+
+    <!-- HEROI -->
+    <section class="container">
+        <div class="hero-content">
+            <p class="hero-eyebrow">FromSoftware × George R.R. Martin</p>
+            <h1 class="hero-titulo">
+                <span class="linha-titulo">ELDEN</span>
+                <span class="linha-titulo destaque">RING</span>
+            </h1>
+            <p class="hero-subtitulo">Ergue o Anel Prateado. Torna-te o Lorde Prístino.<br>As Terras Intermédias aguardam o Maculado.</p>
+            <div class="botoes-hero">
+                <a href="#chefes" class="btn-primario">Ver os Chefes</a>
+                <a href="#lore" class="btn-secundario">Descobrir a Lore</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- CITAÇÃO -->
+    <div class="secao-citacao">
+        <blockquote class="texto-citacao">"O Anel Prístino foi despedaçado. Os fragmentos, as Runas Maiores, foram levados pelos filhos da Rainha Marika. Os Semideuses."</blockquote>
+    </div>
+
+    <!-- CHEFES -->
+    <section class="secao-chefes" id="chefes">
+        <div class="cabecalho-secao">
+            <span class="etiqueta-secao">Inimigos Lendários</span>
+            <h2 class="titulo-secao">Os Grandes Chefes</h2>
+            <p class="subtitulo-secao">Criaturas de poder imenso que guardam as Runas Maiores nas Terras Intermédias</p>
+        </div>
+
+        <div class="lista-chefes">
+
+            <div class="cartao-chefe">
+                <div class="imagem-chefe-wrap">
+                    <img class="foto-chefe" src="imagens/margit.webp" alt="Margit, o Presságio Sombrio">
+                    <span class="dificuldade-chefe"> Médio</span>
+                </div>
+                <div class="info-chefe">
+                    <span class="regiao-chefe">Castelo Stormveil</span>
+                    <h3 class="nome-chefe">Margit, o Presságio Sombrio</h3>
+                    <p class="descricao-chefe">O primeiro grande guardião das Terras Intermédias. Margit bloqueia o caminho para Godrick com ataques rápidos e um martelo sagrado feito de luz pura. Muitos Maculados encontram aqui seu fim definitivo, (por ser o primeiro chefe apanhei muito. Mortes: 20).</p>
+                    <div class="estatisticas-chefe">
+                        <div class="linha-stat"><span class="rotulo-stat">VIDA</span><div class="barra-stat"><div class="preenchimento-stat" style="width:45%"></div></div></div>
+                        <div class="linha-stat"><span class="rotulo-stat">DANO</span><div class="barra-stat"><div class="preenchimento-stat" style="width:60%"></div></div></div>
+                        <div class="linha-stat"><span class="rotulo-stat">VELOCIDADE</span><div class="barra-stat"><div class="preenchimento-stat" style="width:75%"></div></div></div>
+                    </div>
+                    <div class="drops-chefe">
+                        <span class="etiqueta-drop">🔮 Fragmento de Runa</span>
+                        <span class="etiqueta-drop">12.000 Runas</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cartao-chefe">
+                <div class="imagem-chefe-wrap">
+                    <img class="foto-chefe" src="imagens/godrick.jpg" alt="Godrick, o Enxertado">
+                    <span class="dificuldade-chefe dificil"> Difícil</span>
+                    <span class="emblema-chefe">SEMIDEUS</span>
+                </div>
+                <div class="info-chefe">
+                    <span class="regiao-chefe">Castelo Stormveil</span>
+                    <h3 class="nome-chefe">Godrick, o Enxertado</h3>
+                    <p class="descricao-chefe">Neto mais fraco da Rainha Marika, Godrick compensou sua fraqueza enxertando membros de outros seres em seu corpo. Na segunda fase, enxerta um dragão no próprio braço para atacar com fogo, (complicado mas depois de pegar o padrão é tranquilo. Mortes: 7).</p>
+                    <div class="estatisticas-chefe">
+                        <div class="linha-stat"><span class="rotulo-stat">VIDA</span><div class="barra-stat"><div class="preenchimento-stat" style="width:70%"></div></div></div>
+                        <div class="linha-stat"><span class="rotulo-stat">DANO</span><div class="barra-stat"><div class="preenchimento-stat" style="width:80%"></div></div></div>
+                        <div class="linha-stat"><span class="rotulo-stat">VELOCIDADE</span><div class="barra-stat"><div class="preenchimento-stat" style="width:50%"></div></div></div>
+                    </div>
+                    <div class="drops-chefe">
+                        <span class="etiqueta-drop">👑 Runa Maior de Godrick</span>
+                        <span class="etiqueta-drop">20.000 Runas</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cartao-chefe">
+                <div class="imagem-chefe-wrap">
+                    <img class="foto-chefe" src="imagens\Rennala_upscayl_4x_digital-art-4x.png"" alt="Rennala, Rainha da Lua Cheia">
+                    <span class="dificuldade-chefe">Médio</span>
+                </div>
+                <div class="info-chefe">
+                    <span class="regiao-chefe">Academia de Raya Lucaria</span>
+                    <h3 class="nome-chefe">Rennala, Rainha da Lua Cheia</h3>
+                    <p class="descricao-chefe">Ex-líder da Academia e mãe dos semideuses Ranni, Radahn e Rykard. Luta com magia lunar devastadora e invoca criaturas refeitas pelo seu amor incondicional, (apesar da magia não é tão forte. Mortes: 2).</p>
+                    <div class="estatisticas-chefe">
+                        <div class="linha-stat"><span class="rotulo-stat">VIDA</span><div class="barra-stat"><div class="preenchimento-stat" style="width:55%"></div></div></div>
+                        <div class="linha-stat"><span class="rotulo-stat">DANO</span><div class="barra-stat"><div class="preenchimento-stat" style="width:85%"></div></div></div>
+                        <div class="linha-stat"><span class="rotulo-stat">VELOCIDADE</span><div class="barra-stat"><div class="preenchimento-stat" style="width:40%"></div></div></div>
+                    </div>
+                    <div class="drops-chefe">
+                        <span class="etiqueta-drop">🌙 Grande Runa da Lua Cheia</span>
+                        <span class="etiqueta-drop">40.000 Runas</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cartao-chefe">
+                <div class="imagem-chefe-wrap">
+                    <img class="foto-chefe" src="imagens/radan.jpg" alt="Radahn, Flagelo das Estrelas">
+                    <span class="dificuldade-chefe lendario">Lendário</span>
+                    <span class="emblema-chefe">SEMIDEUS</span>
+                </div>
+                <div class="info-chefe">
+                    <span class="regiao-chefe">Caelid — Campos de Starscourge</span>
+                    <h3 class="nome-chefe">Radahn, Flagelo das Estrelas</h3>
+                    <p class="descricao-chefe">O maior guerreiro das Terras Intermédias. Usa gravidade para manter as estrelas presas no céu. Na segunda fase, cai do céu como um meteoro destruidor, (realmente difícil, mas aprendi a lidar com as tentativas. Mortes: 15).</p>
+                    <div class="estatisticas-chefe">
+                        <div class="linha-stat"><span class="rotulo-stat">VIDA</span><div class="barra-stat"><div class="preenchimento-stat" style="width:95%"></div></div></div>
+                        <div class="linha-stat"><span class="rotulo-stat">DANO</span><div class="barra-stat"><div class="preenchimento-stat" style="width:95%"></div></div></div>
+                        <div class="linha-stat"><span class="rotulo-stat">VELOCIDADE</span><div class="barra-stat"><div class="preenchimento-stat" style="width:65%"></div></div></div>
+                    </div>
+                    <div class="drops-chefe">
+                        <span class="etiqueta-drop">⭐ Runa Maior de Radahn</span>
+                        <span class="etiqueta-drop">70.000 Runas</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cartao-chefe">
+                <div class="imagem-chefe-wrap">
+                    <img class="foto-chefe" src="imagens\malenia_upscayl_4x_digital-art-4x.png" alt="Malenia, Lâmina de Miquella">
+                    <span class="dificuldade-chefe extremo">Extremo</span>
+                    <span class="emblema-chefe opcional">OPCIONAL</span>
+                </div>
+                <div class="info-chefe">
+                    <span class="regiao-chefe">Haligtree de Miquella</span>
+                    <h3 class="nome-chefe">Malenia, Lâmina de Miquella</h3>
+                    <p class="descricao-chefe">A chefe mais difícil do jogo. Ela restaura Vida a cada golpe que acerta — mesmo se bloqueado. Sua Dança das Pétalas é o ataque mais icônico e letal dos games, (morri mais de 70 vezes para derrota-lá).</p>
+                    <div class="estatisticas-chefe">
+                        <div class="linha-stat"><span class="rotulo-stat">VIDA</span><div class="barra-stat"><div class="preenchimento-stat" style="width:90%"></div></div></div>
+                        <div class="linha-stat"><span class="rotulo-stat">DANO</span><div class="barra-stat"><div class="preenchimento-stat" style="width:100%"></div></div></div>
+                        <div class="linha-stat"><span class="rotulo-stat">VELOCIDADE</span><div class="barra-stat"><div class="preenchimento-stat" style="width:100%"></div></div></div>
+                    </div>
+                    <div class="drops-chefe">
+                        <span class="etiqueta-drop">🌸 Runa Maior de Malenia</span>
+                        <span class="etiqueta-drop">480.000 Runas</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cartao-chefe chefe-final">
+                <div class="imagem-chefe-wrap">
+                    <img class="foto-chefe" src="imagens/radagon.jpg" alt="A Besta Élfica">
+                    <span class="dificuldade-chefe lendario">💀 Final</span>
+                    <span class="emblema-chefe final">CHEFE FINAL</span>
+                </div>
+                <div class="info-chefe">
+                    <span class="regiao-chefe">Elden Trono — Leyndell</span>
+                    <h3 class="nome-chefe">A Besta Élfica</h3>
+                    <p class="descricao-chefe">A encarnação do Anel Prístino e do Grande Vontade. A batalha final é precedida por Radagon de Estrela Dourada. Usa poder sagrado colossal e invoca espadas douradas do cosmos. Derrotá-la determina o destino eterno das Terras Intermédias, (chefe sem padrão, muito difícil de encarar. Mortes: 43).</p>
+                    <div class="estatisticas-chefe">
+                        <div class="linha-stat"><span class="rotulo-stat">VIDA</span><div class="barra-stat"><div class="preenchimento-stat dourado" style="width:100%"></div></div></div>
+                        <div class="linha-stat"><span class="rotulo-stat">DANO</span><div class="barra-stat"><div class="preenchimento-stat dourado" style="width:90%"></div></div></div>
+                        <div class="linha-stat"><span class="rotulo-stat">VELOCIDADE</span><div class="barra-stat"><div class="preenchimento-stat dourado" style="width:80%"></div></div></div>
+                    </div>
+                    <div class="drops-chefe">
+                        <span class="etiqueta-drop">✨ Relembrança da Besta Élfica</span>
+                        <span class="etiqueta-drop">500.000 Runas</span>
+                        <span class="etiqueta-drop">Fim do Jogo</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- MINHA JORNADA -->
+    <section class="secao-jornada" id="jornada">
+        <div class="conteudo-jornada">
+            <div class="cabecalho-secao">
+                <span class="etiqueta-secao">Uma história real</span>
+                <h2 class="titulo-secao">Minha Jornada</h2>
+                <p class="subtitulo-secao">Elden Ring não é só um jogo — é uma memória que guardo com carinho</p>
+            </div>
+
+            <div class="narrativa-jornada">
+                <p>Tudo começou porque diziam que era impossível. Esse jogo tem essa fama — chefes que parecem injustos, batalhas que testam a paciência de qualquer um. Então eu e meu pai decidimos encarar. E assim começou uma das melhores experiências que já tivemos juntos.</p>
+            </div>
+
+            <div class="perfis-jornada">
+                <div class="cartao-perfil">
+                    <span class="icone-perfil">🗡️</span>
+                    <h3 class="nome-perfil">Eu — O Guerreiro</h3>
+                    <p class="descricao-perfil">Sempre joguei com espada na mão, focado em velocidade. Entrar perto, acertar rápido e sair antes de levar dano. A agilidade era minha maior arma nas batalhas.</p>
+                    <span class="estilo-perfil">Build: Velocidade & Espada</span>
+                </div>
+                <div class="divisor-perfil">
+                    <div class="vs-perfil">VS</div>
+                    <div class="linha-divisor"></div>
+                </div>
+                <div class="cartao-perfil">
+                    <span class="icone-perfil">🔮</span>
+                    <h3 class="nome-perfil">Meu Pai — O Mago</h3>
+                    <p class="descricao-perfil">Atacava de longe, com magias. Mandava seus feitiços sempre com uma distância segura e destruia a todos. O tempo certo e a paciência eram suas melhores armas.</p>
+                    <span class="estilo-perfil">Build: Magia à Distância</span>
+                </div>
+            </div>
+
+            <div class="momentos-jornada">
+                <div class="cartao-momento">
+                    <span class="icone-momento">💀</span>
+                    <h4>20+ mortes pro mesmo chefe</h4>
+                    <p>Tinha chefe que a gente morria mais de vinte vezes e continuava tentando. Sem desistir. Esse jogo te ensina a ser resiliente de um jeito que poucos fazem.</p>
+                </div>
+                <div class="cartao-momento destaque">
+                    <span class="icone-momento">🌙</span>
+                    <h4>Madrugadas até as 3h da manhã</h4>
+                    <p>Minha mãe tinha que nos tirar na força da frente do videogame. A gente perdia a noção do tempo completamente — e nem ligávamos.</p>
+                </div>
+                <div class="cartao-momento">
+                    <span class="icone-momento">🎮</span>
+                    <h4>Um perfil, dois estilos</h4>
+                    <p>O melhor de Elden Ring é que o personagem é eclético — então eu e meu pai jogávamos no mesmo perfil, cada um com seu estilo, batalhando juntos.</p>
+                </div>
+            </div>
+
+            <div class="frase-jornada">
+                <span class="aspas-decorativas">"</span>
+                <p>Nunca trocaria essa experiência que tive com meu pai por nada. Foi um passatempo que virou memória.</p>
+                <p>PS: No contexto de Elden Ring, “prístino” descreve algo que está no seu estado original, puro e intacto — antes da decadência do mundo.</p>
+                <span class="aspas-decorativas">"</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- LORE -->
+    <section class="secao-lore" id="lore">
+        <div class="conteudo-lore">
+            <div class="cabecalho-secao">
+                <span class="etiqueta-secao">História das Terras Intermédias</span>
+                <h2 class="titulo-secao">A Lore de Elden Ring</h2>
+            </div>
+            <div class="lista-lore">
+                <div class="cartao-lore">
+                    <span class="icone-lore">⚡</span>
+                    <h3>A Grande Vontade</h3>
+                    <p>Uma entidade cósmica que rege as Terras Intermédias através do Anel Prístino. Sua vontade é transmitida pelos Dois Dedos, e sua ordem determina quem pode se tornar o Lorde Prístino.</p>
+                </div>
+                <div class="cartao-lore">
+                    <span class="icone-lore">💍</span>
+                    <h3>O Anel Prístino</h3>
+                    <p>O artefato mais poderoso das Terras Intermédias. Criado pela Rainha Marika, foi despedaçado durante a Noite da Ruptura pelos Semideuses, espalhando as Runas Maiores pelo mundo.</p>
+                </div>
+                <div class="cartao-lore">
+                    <span class="icone-lore">👑</span>
+                    <h3>Rainha Marika</h3>
+                    <p>Deusa imortal e guardiã do Anel Prístino. Marika e sua dupla Radagon são, na verdade, a mesma entidade. Ela deliberadamente destruiu o Anel Prístino, iniciando a Ruptura.</p>
+                </div>
+                <div class="cartao-lore">
+                    <span class="icone-lore">🌑</span>
+                    <h3>Os Maculados</h3>
+                    <p>Guerreiros que perderam a graça da Árvore Maior e foram exilados das Terras Intermédias. Convocados de volta pela graça, buscam se tornar o novo Lorde Prístino.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- REGIÕES -->
+    <section class="secao-regioes" id="regioes">
+        <div class="cabecalho-secao">
+            <span class="etiqueta-secao">Mundo Aberto</span>
+            <h2 class="titulo-secao">Regiões das Terras Intermédias</h2>
+            <p class="subtitulo-secao">Um mundo vasto e interconectado para explorar</p>
+        </div>
+        <div class="lista-regioes">
+            <div class="cartao-regiao">
+                <img class="foto-regiao" src="imagens/limgrave.jpg" alt="Limgrave">
+                <div class="sobreposicao-regiao"></div>
+                <div class="info-regiao"><h3>Limgrave</h3><p>A região inicial. Campos verdes e o imponente Castelo Stormveil.</p></div>
+            </div>
+            <div class="cartao-regiao">
+                <img class="foto-regiao" src="imagens/Caelid.jpg" alt="Caelid">
+                <div class="sobreposicao-regiao"></div>
+                <div class="info-regiao"><h3>Caelid</h3><p>Terra devastada pela Podridão Escarlate. Vermelha e hostil.</p></div>
+            </div>
+            <div class="cartao-regiao">
+                <img class="foto-regiao" src="imagens/Liurna_dos_Lagos.jpg" alt="Liurnia dos Lagos">
+                <div class="sobreposicao-regiao"></div>
+                <div class="info-regiao"><h3>Liurnia dos Lagos</h3><p>Lagos imensos e a Academia de Raya Lucaria no horizonte.</p></div>
+            </div>
+            <div class="cartao-regiao">
+                <img class="foto-regiao" src="imagens/Montanha_dos_Gigantes.jpg" alt="Montanhas dos Gigantes">
+                <div class="sobreposicao-regiao"></div>
+                <div class="info-regiao"><h3>Montanhas dos Gigantes</h3><p>O pico gelado onde habitam gigantes e segredos ancestrais.</p></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="secao-cta">
+        <span class="rune-cta">&#9775;</span>
+        <h2 class="titulo-cta">Sua jornada aguarda</h2>
+        <p class="subtitulo-cta">Ergue o Anel Prateado. As Terras Intermédias te chamam.</p>
+        <a href="https://store.steampowered.com/app/1245620/ELDEN_RING/" target="_blank" class="btn-primario">Comprar no Steam</a>
+    </section>
+
+    <!-- RODAPE -->
+    <footer class="rodape" id="rodape">
+        <div class="links-rodape">
+            <div>
+                <h3 class="titulo-rodape">Navegação</h3>
+                <a href="#home" class="opcoes-rodape">Início</a>
+                <a href="#chefes" class="opcoes-rodape">Chefes</a>
+                <a href="#jornada" class="opcoes-rodape">Minha Jornada</a>
+                <a href="#lore" class="opcoes-rodape">Lore</a>
+                <a href="#regioes" class="opcoes-rodape">Regiões</a>
+            </div>
+            <div>
+                <h3 class="titulo-rodape">Desenvolvido por</h3>
+                <span class="opcoes-rodape">FromSoftware</span>
+                <span class="opcoes-rodape">George R.R. Martin (lore)</span>
+                <span class="opcoes-rodape">Bandai Namco (publisher)</span>
+            </div>
+        </div>
+        <div class="logo-rodape">
+            <div class="rune-grande">&#9775;</div>
+            <p class="nome-logo">Elden Ring</p>
+            <p class="slogan-rodape">Em Busca do anel Prístino</p>
+        </div>
+        <div class="informacoes-rodape">
+            <div class="bloco-informacao">
+                <h4 class="titulo-informacao">Lançamento</h4>
+                <p class="texto-informacao">25 de fevereiro de 2022</p>
+            </div>
+            <div class="bloco-informacao">
+                <h4 class="titulo-informacao">Plataformas</h4>
+                <p class="texto-informacao">PC, PS4, PS5, Xbox One, Series X/S</p>
+            </div>
+            <div class="bloco-informacao">
+                <h4 class="titulo-informacao">Gênero</h4>
+                <p class="texto-informacao">Ação RPG, Mundo Aberto</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(function(link) {
+            link.addEventListener('click', function(e) {
+                var alvo = document.querySelector(link.getAttribute('href'));
+                if (alvo) {
+                    e.preventDefault();
+                    alvo.scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        });
+     </script>
+
+</body>
+</html>

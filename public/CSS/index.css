@@ -1,0 +1,585 @@
+/* ══════════════════════════════════════════
+   INDEX — estilos exclusivos do index.html
+══════════════════════════════════════════ */
+
+/* ── HERO ── */
+.container {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: #080608;
+    padding: 120px 20px 80px;
+}
+
+.hero-content {
+    max-width: 700px;
+}
+
+.hero-eyebrow {
+    font-size: 12px;
+    letter-spacing: 4px;
+    color: #7a6040;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.hero-titulo {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 28px;
+}
+
+.linha-titulo {
+    font-size: 100px;
+    font-weight: bold;
+    color: #e0d0b0;
+    letter-spacing: 16px;
+    line-height: 1;
+}
+
+.linha-titulo.destaque {
+    color: #c8a060;
+}
+
+.hero-subtitulo {
+    font-size: 18px;
+    font-style: italic;
+    color: #8a7a6a;
+    line-height: 1.7;
+    margin-bottom: 40px;
+}
+
+.botoes-hero {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* ── CITAÇÃO ── */
+.secao-citacao {
+    padding: 50px 60px;
+    text-align: center;
+    border-top: 1px solid #2a2010;
+    border-bottom: 1px solid #2a2010;
+}
+
+.texto-citacao {
+    font-size: 17px;
+    font-style: italic;
+    color: #8a7a6a;
+    max-width: 650px;
+    margin: 0 auto;
+    line-height: 1.8;
+}
+
+/* ── CHEFES ── */
+.secao-chefes {
+    padding: 80px 60px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.lista-chefes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 28px;
+    justify-content: center;
+}
+
+.cartao-chefe {
+    background-color: #100d14;
+    border: 1px solid #2a2218;
+    overflow: hidden;
+    transition: border-color 0.3s;
+    width: calc(50% - 14px);
+    min-width: 340px;
+}
+
+.cartao-chefe:hover {
+    border-color: #c8a060;
+}
+
+.cartao-chefe.chefe-final {
+    width: 100%;
+    display: flex;
+}
+
+.imagem-chefe-wrap {
+    position: relative;
+    height: 260px;
+    background-color: #0d0810;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.chefe-final .imagem-chefe-wrap {
+    height: auto;
+    min-height: 320px;
+    width: 45%;
+    flex-shrink: 0;
+}
+
+/* ── FOTO DO CHEFE ── */
+/* Para adicionar imagem, basta colocar o src no HTML:
+   <img class="foto-chefe" src="imagens/margit.jpg" alt="Margit"> */
+.foto-chefe {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top center;
+    opacity: 0.85;
+    display: block;
+}
+
+.dificuldade-chefe {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding: 4px 10px;
+    background-color: rgba(10, 8, 15, 0.85);
+    border: 1px solid #2a2218;
+    color: #c8a060;
+}
+
+.dificuldade-chefe.dificil {
+    color: #e07030;
+}
+
+.dificuldade-chefe.lendario {
+    color: #c03020;
+}
+
+.dificuldade-chefe.extremo {
+    color: #901010;
+}
+
+.emblema-chefe {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    font-size: 10px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    padding: 4px 10px;
+    background-color: #c8a060;
+    color: #0a0a0a;
+}
+
+.emblema-chefe.opcional {
+    background-color: #5a5a5a;
+    color: #ddd;
+}
+
+.emblema-chefe.final {
+    background-color: #e0b870;
+    color: #0a0a0a;
+}
+
+.info-chefe {
+    padding: 24px;
+}
+
+.chefe-final .info-chefe {
+    flex: 1;
+}
+
+.regiao-chefe {
+    font-size: 11px;
+    letter-spacing: 2px;
+    color: #7a6040;
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.nome-chefe {
+    font-size: 20px;
+    font-weight: bold;
+    color: #c8a060;
+    margin-bottom: 12px;
+}
+
+.descricao-chefe {
+    font-size: 15px;
+    line-height: 1.7;
+    color: #8a7a6a;
+    margin-bottom: 20px;
+}
+
+/* ── ESTATÍSTICAS ── */
+.estatisticas-chefe {
+    margin-bottom: 18px;
+}
+
+.linha-stat {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 8px;
+}
+
+.rotulo-stat {
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    color: #8a7a6a;
+    width: 80px;
+}
+
+.barra-stat {
+    flex: 1;
+    height: 4px;
+    background-color: #2a2218;
+    border-radius: 2px;
+}
+
+.preenchimento-stat {
+    height: 100%;
+    background-color: #c8a060;
+    border-radius: 2px;
+}
+
+.preenchimento-stat.dourado {
+    background-color: #e0c070;
+}
+
+/* ── DROPS ── */
+.drops-chefe {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.etiqueta-drop {
+    font-size: 11px;
+    padding: 4px 10px;
+    border: 1px solid #2a2218;
+    color: #7a6040;
+}
+
+/* ── JORNADA ── */
+.secao-jornada {
+    padding: 80px 60px;
+    border-top: 1px solid #2a2010;
+    border-bottom: 1px solid #2a2010;
+    background-color: #0c0a10;
+}
+
+.conteudo-jornada {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.narrativa-jornada {
+    max-width: 720px;
+    margin: 0 auto 56px;
+    text-align: center;
+}
+
+.narrativa-jornada p {
+    font-size: 17px;
+    line-height: 1.85;
+    color: #8a7a6a;
+    font-style: italic;
+}
+
+/* ── PERFIS ── */
+.perfis-jornada {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    margin-bottom: 56px;
+    justify-content: center;
+}
+
+.cartao-perfil {
+    background-color: #100d14;
+    border: 1px solid #2a2218;
+    padding: 32px 28px;
+    flex: 1;
+    max-width: 400px;
+    text-align: center;
+    transition: border-color 0.3s;
+}
+
+.cartao-perfil:hover {
+    border-color: #c8a060;
+}
+
+.icone-perfil {
+    font-size: 42px;
+    margin-bottom: 16px;
+    display: block;
+}
+
+.nome-perfil {
+    font-size: 18px;
+    color: #c8a060;
+    margin-bottom: 12px;
+    letter-spacing: 1px;
+}
+
+.descricao-perfil {
+    font-size: 15px;
+    line-height: 1.7;
+    color: #8a7a6a;
+    margin-bottom: 16px;
+}
+
+.estilo-perfil {
+    font-size: 11px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #7a6040;
+    border: 1px solid #2a2218;
+    padding: 5px 12px;
+    display: inline-block;
+}
+
+.divisor-perfil {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    flex-shrink: 0;
+}
+
+.vs-perfil {
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: #c8a060;
+    border: 1px solid #5a4a20;
+    padding: 8px 12px;
+}
+
+.linha-divisor {
+    width: 1px;
+    height: 60px;
+    background-color: #2a2218;
+}
+
+/* ── MOMENTOS DA JORNADA ── */
+.momentos-jornada {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-bottom: 56px;
+    justify-content: center;
+}
+
+.cartao-momento {
+    background-color: #100d14;
+    border: 1px solid #2a2218;
+    padding: 28px 24px;
+    transition: border-color 0.3s;
+    flex: 1;
+    min-width: 260px;
+    max-width: 340px;
+}
+
+.cartao-momento:hover {
+    border-color: #c8a060;
+}
+
+.cartao-momento.destaque {
+    border-color: #5a4a20;
+}
+
+.icone-momento {
+    font-size: 32px;
+    display: block;
+    margin-bottom: 14px;
+}
+
+.cartao-momento h4 {
+    font-size: 16px;
+    color: #c8a060;
+    margin-bottom: 10px;
+}
+
+.cartao-momento p {
+    font-size: 14px;
+    line-height: 1.7;
+    color: #8a7a6a;
+}
+
+/* ── FRASE FINAL JORNADA ── */
+.frase-jornada {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.frase-jornada p {
+    font-size: 18px;
+    font-style: italic;
+    color: #c8a060;
+    line-height: 1.7;
+}
+
+.aspas-decorativas {
+    font-size: 60px;
+    color: #3a2a10;
+    font-family: Georgia, serif;
+    line-height: 1;
+    flex-shrink: 0;
+}
+
+/* ── LORE ── */
+.secao-lore {
+    padding: 80px 60px;
+    border-top: 1px solid #2a2010;
+    border-bottom: 1px solid #2a2010;
+    background-color: #0c0a10;
+}
+
+.conteudo-lore {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.lista-lore {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 28px;
+    justify-content: center;
+}
+
+.cartao-lore {
+    padding: 30px 24px;
+    border: 1px solid #2a2218;
+    text-align: center;
+    transition: border-color 0.3s;
+    flex: 1;
+    min-width: 220px;
+    max-width: 280px;
+}
+
+.cartao-lore:hover {
+    border-color: #c8a060;
+}
+
+.icone-lore {
+    font-size: 36px;
+    margin-bottom: 16px;
+    display: block;
+}
+
+.cartao-lore h3 {
+    font-size: 17px;
+    color: #c8a060;
+    margin-bottom: 12px;
+    letter-spacing: 1px;
+}
+
+.cartao-lore p {
+    font-size: 15px;
+    line-height: 1.7;
+    color: #8a7a6a;
+}
+
+/* ── REGIÕES ── */
+.secao-regioes {
+    padding: 80px 60px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.lista-regioes {
+    display: flex;
+    gap: 16px;
+    height: 380px;
+}
+
+.cartao-regiao {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    transition: opacity 0.2s;
+    flex: 1;
+}
+
+.cartao-regiao:hover {
+    opacity: 0.85;
+}
+
+/* ── FOTO DA REGIÃO ── */
+/* Para adicionar imagem, basta colocar o src no HTML:
+   <img class="foto-regiao" src="imagens/limgrave.jpg" alt="Limgrave"> */
+.foto-regiao {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+}
+
+.sobreposicao-regiao {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.2) 60%, transparent 100%);
+}
+
+.info-regiao {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 24px 20px;
+}
+
+.info-regiao h3 {
+    font-size: 18px;
+    color: #c8a060;
+    margin-bottom: 6px;
+}
+
+.info-regiao p {
+    font-size: 13px;
+    color: #8a7a6a;
+    line-height: 1.4;
+}
+
+/* ── CTA ── */
+.secao-cta {
+    padding: 100px 60px;
+    text-align: center;
+    border-top: 1px solid #2a2010;
+}
+
+.rune-cta {
+    font-size: 70px;
+    color: #c8a060;
+    display: block;
+    margin-bottom: 24px;
+}
+
+.titulo-cta {
+    font-size: 65px;
+    font-weight: bold;
+    color: #c8a060;
+    letter-spacing: 3px;
+    margin-bottom: 14px;
+}
+
+.subtitulo-cta {
+    font-size: 18px;
+    font-style: italic;
+    color: #8a7a6a;
+    margin-bottom: 40px;
+}
