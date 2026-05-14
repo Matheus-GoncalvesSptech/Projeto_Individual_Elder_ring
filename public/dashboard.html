@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,6 +9,7 @@
     <link rel="stylesheet" href="CSS/dashboard.css">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
+
 <body>
 
     <header>
@@ -31,7 +33,8 @@
         <div class="card-acesso-negado">
             <span class="rune-negado">&#9775;</span>
             <h2>Acesso Bloqueado</h2>
-            <p>Apenas Maculados que provaram seu valor podem acessar as crônicas das Terras Intermédias. Faça o quiz e entre com suas credenciais para continuar.</p>
+            <p>Apenas Maculados que provaram seu valor podem acessar as crônicas das Terras Intermédias. Faça o quiz e
+                entre com suas credenciais para continuar.</p>
             <div class="acoes-negado">
                 <a href="login.html" class="btn-primario">Entrar</a>
                 <a href="index.html#quiz" class="btn-secundario">Fazer o Quiz</a>
@@ -50,6 +53,8 @@
                 <h2 class="usuario-nome" id="dash-nome-usuario">—</h2>
                 <p class="usuario-chefe" id="dash-chefe-usuario">Seu chefe: <span>—</span></p>
             </div>
+            <button class="btn-sair" id="btn-favoritar" onclick="toggleFavorito()" style="display:none">&#9825;
+                Favoritar</button>
             <button class="btn-sair" onclick="sair()">Sair</button>
         </div>
 
@@ -78,7 +83,8 @@
         <!-- LINHA 2: TOTAL + FEED -->
         <div class="grid-dash">
 
-            <div class="card-dash" style="text-align:center; display:flex; flex-direction:column; align-items:center; justify-content:center;">
+            <div class="card-dash"
+                style="text-align:center; display:flex; flex-direction:column; align-items:center; justify-content:center;">
                 <div class="card-dash-titulo" style="width:100%; justify-content:center">Total de Maculados</div>
                 <div class="stat-numero" id="dash-total">0</div>
                 <p class="stat-label">jogadores já descobriram seu chefe</p>
@@ -115,12 +121,12 @@
     <script>
         // Cores de cada chefe para o gráfico de pizza
         var coresPorChefe = {
-            'Margit':        '#7a5c2a',
-            'Godrick':       '#d4a843',
-            'Rennala':       '#4a7aad',
-            'Radahn':        '#8b1a1a',
-            'Malenia':       '#c0392b',
-            'Besta Elfica':  '#2d6a2d'
+            'Margit': '#7a5c2a',
+            'Godrick': '#d4a843',
+            'Rennala': '#4a7aad',
+            'Radahn': '#8b1a1a',
+            'Malenia': '#c0392b',
+            'Besta Elfica': '#2d6a2d'
         };
 
         var grafico = null;
@@ -198,6 +204,10 @@
         function atualizarChefeUsuario(chefe) {
             var el = document.getElementById('dash-chefe-usuario');
             el.innerHTML = 'Você seria: <span>' + chefe + '</span>';
+
+            // Pega o id do chefe e mostra o botão de favoritar
+            chefeAtualId = idsPorChefe[chefe];
+            document.getElementById('btn-favoritar').style.display = 'block';
         }
 
         // Carrega todos os dados do dashboard (gráfico, ranking, feed, total)
@@ -227,7 +237,7 @@
         function atualizarGrafico(dados) {
             var labels = dados.map(function (d) { return d.chefe; });
             var totais = dados.map(function (d) { return d.total; });
-            var cores  = labels.map(function (l) { return coresPorChefe[l] || '#5a4a20'; });
+            var cores = labels.map(function (l) { return coresPorChefe[l] || '#5a4a20'; });
 
             // Se o gráfico já existe, só atualiza os dados
             if (grafico) {
@@ -272,7 +282,7 @@
         function atualizarRanking(dados) {
             var maximo = dados.length > 0 ? dados[0].total : 1;
             var medalhas = ['ouro', 'prata', 'bronze'];
-            var numeros  = ['1°', '2°', '3°'];
+            var numeros = ['1°', '2°', '3°'];
 
             var html = '';
             dados.forEach(function (item, i) {
@@ -320,6 +330,37 @@
             document.getElementById('feed-lista').innerHTML = html || '<p style="color:#4a3a20;font-style:italic;font-size:14px">Nenhuma resposta ainda.</p>';
         }
 
+        var chefeAtualId = null;
+        var jaFavoritado = false;
+
+        var idsPorChefe = {
+            'Margit': 1,
+            'Godrick': 2,
+            'Rennala': 3,
+            'Radahn': 4,
+            'Malenia': 5,
+            'Besta Elfica': 6
+        };
+
+        function toggleFavorito() {
+            if (jaFavoritado) {
+                fetch('/favoritos/desfavoritar/' + sessionStorage.ID_USUARIO + '/' + chefeAtualId, {
+                    method: 'DELETE'
+                }).then(function (r) {
+                    jaFavoritado = false;
+                    document.getElementById('btn-favoritar').innerHTML = '&#9825; Favoritar';
+                });
+            } else {
+                fetch('/favoritos/favoritar', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ idUsuario: sessionStorage.ID_USUARIO, idChefe: chefeAtualId })
+                }).then(function (r) {
+                    jaFavoritado = true;
+                    document.getElementById('btn-favoritar').innerHTML = '&#9829; Favoritado';
+                });
+            }
+        }
         // Limpa o sessionStorage e volta para o início
         function sair() {
             sessionStorage.clear();
@@ -328,4 +369,5 @@
     </script>
 
 </body>
+
 </html>
