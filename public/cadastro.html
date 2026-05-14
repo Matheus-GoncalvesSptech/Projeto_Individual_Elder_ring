@@ -7,7 +7,6 @@
     <link rel="stylesheet" href="CSS/global.css">
     <link rel="stylesheet" href="CSS/login_cadastro.css">
 </head>
-<body onload="listar()">
 
     <header>
         <div class="cabecalho-menu">
@@ -161,25 +160,7 @@
 
             return false;
         }
-
-        // Busca as empresas cadastradas na API (para validação de código de ativação, se necessário)
-        function listar() {
-            fetch("/empresas/listar", {
-                method: "GET"
-            }).then(function (resposta) {
-                resposta.json().then(function (empresas) {
-                    empresas.forEach(function (empresa) {
-                        listaEmpresasCadastradas.push(empresa);
-                    });
-                });
-            }).catch(function (erro) {
-                console.log("Erro ao buscar empresas: ", erro);
-            });
-        }
-
-        function sumirMensagem() {
-            cardErro.style.display = "none";
-        }
+   
     </script>
 
 </body>

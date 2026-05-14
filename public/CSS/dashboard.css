@@ -1,0 +1,301 @@
+/* ── SEÇÃO PRINCIPAL ── */
+.secao-dashboard {
+    padding: 120px 60px 80px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* ── CARD DO USUÁRIO ── */
+.card-usuario {
+    background-color: #100d14;
+    border: 1px solid #5a4a20;
+    padding: 36px 40px;
+    margin-bottom: 50px;
+    display: flex;
+    align-items: center;
+    gap: 32px;
+    flex-wrap: wrap;
+}
+
+.usuario-rune {
+    font-size: 52px;
+    color: #c8a060;
+    flex-shrink: 0;
+}
+
+.usuario-info {
+    flex: 1;
+}
+
+.usuario-saudacao {
+    font-size: 13px;
+    letter-spacing: 3px;
+    color: #7a6040;
+    text-transform: uppercase;
+    margin-bottom: 6px;
+}
+
+.usuario-nome {
+    font-size: 28px;
+    color: #c8a060;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 6px;
+}
+
+.usuario-chefe {
+    font-size: 15px;
+    color: #8a7a6a;
+    font-style: italic;
+}
+
+.usuario-chefe span {
+    color: #c8a060;
+    font-style: normal;
+}
+
+.btn-sair {
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 10px 24px;
+    color: #8a7a6a;
+    border: 1px solid #2a2218;
+    cursor: pointer;
+    background: none;
+    font-family: Georgia, serif;
+}
+
+.btn-sair:hover {
+    border-color: #c8a060;
+    color: #c8a060;
+}
+
+/* ── GRID DE CARDS ── */
+.grid-dash {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 28px;
+    margin-bottom: 28px;
+}
+
+.card-dash {
+    background-color: #100d14;
+    border: 1px solid #2a2218;
+    padding: 32px;
+}
+
+.card-dash-titulo {
+    font-size: 11px;
+    letter-spacing: 3px;
+    color: #7a6040;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* ── BADGE AO VIVO ── */
+.badge-live {
+    font-size: 10px;
+    letter-spacing: 1px;
+    color: #4a9a4a;
+    border: 1px solid #2a5a2a;
+    padding: 3px 8px;
+    animation: pisca 1.5s infinite;
+}
+
+@keyframes pisca {
+    0%, 100% { opacity: 1; }
+    50%       { opacity: 0.4; }
+}
+
+/* ── GRÁFICO ── */
+.canvas-wrap {
+    position: relative;
+    height: 280px;
+}
+
+/* ── RANKING ── */
+.lista-ranking {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.item-ranking {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.posicao-ranking {
+    font-size: 13px;
+    font-weight: bold;
+    color: #7a6040;
+    width: 24px;
+    flex-shrink: 0;
+    text-align: center;
+}
+
+.posicao-ranking.ouro   { color: #c8a060; }
+.posicao-ranking.prata  { color: #a0a0a0; }
+.posicao-ranking.bronze { color: #c07840; }
+
+.barra-ranking-wrap {
+    flex: 1;
+}
+
+.nome-ranking {
+    font-size: 14px;
+    color: #c8a060;
+    margin-bottom: 5px;
+}
+
+.barra-ranking {
+    height: 6px;
+    background-color: #2a2218;
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+.fill-ranking {
+    height: 100%;
+    background-color: #c8a060;
+    border-radius: 3px;
+}
+
+.total-ranking {
+    font-size: 12px;
+    color: #7a6040;
+    width: 50px;
+    text-align: right;
+    flex-shrink: 0;
+}
+
+/* ── STAT TOTAL ── */
+.stat-numero {
+    font-size: 56px;
+    font-weight: bold;
+    color: #c8a060;
+    letter-spacing: 4px;
+    margin-bottom: 8px;
+}
+
+.stat-label {
+    font-size: 14px;
+    color: #8a7a6a;
+    font-style: italic;
+}
+
+/* ── FEED ── */
+.feed-lista {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    max-height: 320px;
+    overflow-y: auto;
+}
+
+.feed-lista::-webkit-scrollbar       { width: 4px; }
+.feed-lista::-webkit-scrollbar-track { background: #1a1520; }
+.feed-lista::-webkit-scrollbar-thumb { background: #3a2a10; }
+
+.item-feed {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 12px;
+    border: 1px solid #1a1518;
+    background-color: #0d0a10;
+}
+
+.feed-rune {
+    font-size: 18px;
+    flex-shrink: 0;
+}
+
+.feed-texto {
+    flex: 1;
+}
+
+.feed-usuario {
+    font-size: 13px;
+    color: #c8a060;
+    margin-bottom: 2px;
+}
+
+.feed-chefe {
+    font-size: 12px;
+    color: #8a7a6a;
+    font-style: italic;
+}
+
+.feed-tempo {
+    font-size: 11px;
+    color: #4a3a20;
+    flex-shrink: 0;
+}
+
+/* ── AVISO SEM QUIZ ── */
+.aviso-quiz {
+    background-color: rgba(200, 160, 96, 0.06);
+    border: 1px solid #3a2a10;
+    padding: 28px;
+    text-align: center;
+}
+
+.aviso-quiz p {
+    color: #8a7a6a;
+    font-size: 15px;
+    font-style: italic;
+    margin-bottom: 20px;
+}
+
+/* ── TELA DE ACESSO NEGADO ── */
+.secao-acesso-negado {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 100px 20px;
+}
+
+.card-acesso-negado {
+    background-color: #100d14;
+    border: 1px solid #3a2218;
+    padding: 60px 50px;
+    max-width: 500px;
+}
+
+.card-acesso-negado .rune-negado {
+    font-size: 60px;
+    color: #5a4a20;
+    display: block;
+    margin-bottom: 20px;
+}
+
+.card-acesso-negado h2 {
+    font-size: 24px;
+    color: #c8a060;
+    letter-spacing: 2px;
+    margin-bottom: 14px;
+}
+
+.card-acesso-negado p {
+    color: #8a7a6a;
+    font-size: 15px;
+    line-height: 1.7;
+    margin-bottom: 28px;
+    font-style: italic;
+}
+
+.acoes-negado {
+    display: flex;
+    gap: 14px;
+    justify-content: center;
+    flex-wrap: wrap;
+}

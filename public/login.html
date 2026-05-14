@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +8,7 @@
     <link rel="stylesheet" href="CSS/global.css">
     <link rel="stylesheet" href="CSS/login_cadastro.css">
 </head>
+
 <body>
 
     <header>
@@ -88,12 +90,16 @@
                         sessionStorage.NOME_USUARIO = json.nome;
                         sessionStorage.ID_USUARIO = json.id;
 
-                        alert("Graça restaurada! Sua jornada pode continuar.");
+                        if (sessionStorage.getItem('REDIRECIONAR_DASHBOARD') === 'true') {
+                            window.location = 'dashboard.html';
+                            return;
+                        }
+                            alert("Graça restaurada! Sua jornada pode continuar.");
 
-                        setTimeout(function () {
-                            window.location = "index.html";
-                        }, 1000);
-                    });
+                            setTimeout(function () {
+                                window.location = "index.html";
+                            }, 1000);
+                        });
 
                 } else {
                     // Login falhou — mostra mensagem de erro
@@ -117,4 +123,5 @@
     </script>
 
 </body>
+
 </html>

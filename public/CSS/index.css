@@ -517,8 +517,7 @@
 }
 
 /* ── FOTO DA REGIÃO ── */
-/* Para adicionar imagem, basta colocar o src no HTML:
-   <img class="foto-regiao" src="imagens/limgrave.jpg" alt="Limgrave"> */
+
 .foto-regiao {
     position: absolute;
     inset: 0;
@@ -555,22 +554,118 @@
     line-height: 1.4;
 }
 
+
+/*SESSÃO DO QUIZ*/
+
+.secao-quiz {
+    padding: 80px 60px;
+    border-top: 1px solid #2a2010;
+    background-color: #080608;
+}
+
+.conteudo-quiz {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.pergunta-quiz {
+    background-color: #100d14;
+    border: 1px solid #2a2218;
+    padding: 40px;
+}
+
+.numero-pergunta {
+    font-size: 11px;
+    letter-spacing: 3px;
+    color: #7a6040;
+    text-transform: uppercase;
+    margin-bottom: 14px;
+}
+
+.texto-pergunta {
+    font-size: 22px;
+    color: #c8a060;
+    margin-bottom: 28px;
+}
+
+.opcoes-quiz {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.opcao-quiz {
+    background-color: #0a0a0a;
+    border: 1px solid #2a2218;
+    color: #e0d0b0;
+    padding: 14px 20px;
+    text-align: left;
+    font-size: 15px;
+    font-family: Georgia, serif;
+    cursor: pointer;
+}
+
+.opcao-quiz:hover {
+    border-color: #c8a060;
+}
+
+.resultado-card {
+    background-color: #100d14;
+    border: 1px solid #2a2218;
+    padding: 40px;
+    text-align: center;
+}
+
+.resultado-label {
+    font-size: 16px;
+    letter-spacing: 3px;
+    color: #7a6040;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+}
+
+.resultado-chefe {
+    font-size: 32px;
+    color: #c8a060;
+    margin-bottom: 16px;
+}
+
+.resultado-descricao {
+    font-size: 15px;
+    line-height: 1.7;
+    color: #8a7a6a;
+    font-style: italic;
+    margin-bottom: 28px;
+}
+
+.resultado-acoes {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    margin-bottom: 16px;
+}
+
+.resultado-aviso {
+    font-size: 13px;
+    color: #5a4a20;
+}
+
 /* ── CTA ── */
 .secao-cta {
-    padding: 100px 60px;
+    padding: 65px 60px;
     text-align: center;
     border-top: 1px solid #2a2010;
 }
 
 .rune-cta {
-    font-size: 70px;
+    font-size: 65px;
     color: #c8a060;
     display: block;
-    margin-bottom: 24px;
+    margin-bottom: 10px;
 }
 
 .titulo-cta {
-    font-size: 65px;
+    font-size: 55px;
     font-weight: bold;
     color: #c8a060;
     letter-spacing: 3px;
@@ -581,5 +676,5 @@
     font-size: 18px;
     font-style: italic;
     color: #8a7a6a;
-    margin-bottom: 40px;
+    margin-bottom: 30px;
 }

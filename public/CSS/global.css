@@ -113,13 +113,14 @@ header {
     text-transform: uppercase;
     padding: 14px 36px;
     color: #c8a060;
-    border: 1px solid #5a4a20;
+    border: 2px solid #c8a060;
     display: inline-block;
-    transition: background-color 0.2s;
+    background-color: transparent;
 }
 
 .btn-secundario:hover {
-    background-color: rgba(200, 160, 96, 0.1);
+    background-color: #c8a060;
+    color: #0a0a0a;
 }
 
 /* ── CABECALHO DE SEÇÃO (compartilhado) ── */
@@ -129,12 +130,12 @@ header {
 }
 
 .etiqueta-secao {
-    font-size: 11px;
+    font-size: 13px;
     letter-spacing: 4px;
     color: #7a6040;
     text-transform: uppercase;
     display: block;
-    margin-bottom: 10px;
+    margin-bottom: 11px;
 }
 
 .titulo-secao {
