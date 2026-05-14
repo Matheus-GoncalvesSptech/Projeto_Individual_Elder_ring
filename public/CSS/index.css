@@ -1,8 +1,6 @@
-/* ══════════════════════════════════════════
-   INDEX — estilos exclusivos do index.html
-══════════════════════════════════════════ */
+/* INDEX — estilos exclusivos do index.html */
 
-/* ── HERO ── */
+/* HERO */
 .container {
     min-height: 100vh;
     display: flex;
@@ -58,7 +56,7 @@
     flex-wrap: wrap;
 }
 
-/* ── CITAÇÃO ── */
+/* CITAÇÃO */
 .secao-citacao {
     padding: 50px 60px;
     text-align: center;
@@ -75,7 +73,7 @@
     line-height: 1.8;
 }
 
-/* ── CHEFES ── */
+/* CHEFES */
 .secao-chefes {
     padding: 80px 60px;
     max-width: 1200px;
@@ -93,7 +91,6 @@
     background-color: #100d14;
     border: 1px solid #2a2218;
     overflow: hidden;
-    transition: border-color 0.3s;
     width: calc(50% - 14px);
     min-width: 340px;
 }
@@ -111,9 +108,6 @@
     position: relative;
     height: 260px;
     background-color: #0d0810;
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
 
 .chefe-final .imagem-chefe-wrap {
@@ -123,9 +117,6 @@
     flex-shrink: 0;
 }
 
-/* ── FOTO DO CHEFE ── */
-/* Para adicionar imagem, basta colocar o src no HTML:
-   <img class="foto-chefe" src="imagens/margit.jpg" alt="Margit"> */
 .foto-chefe {
     width: 100%;
     height: 100%;
@@ -149,17 +140,9 @@
     color: #c8a060;
 }
 
-.dificuldade-chefe.dificil {
-    color: #e07030;
-}
-
-.dificuldade-chefe.lendario {
-    color: #c03020;
-}
-
-.dificuldade-chefe.extremo {
-    color: #901010;
-}
+.dificuldade-chefe.dificil  { color: #e07030; }
+.dificuldade-chefe.lendario { color: #c03020; }
+.dificuldade-chefe.extremo  { color: #901010; }
 
 .emblema-chefe {
     position: absolute;
@@ -173,15 +156,8 @@
     color: #0a0a0a;
 }
 
-.emblema-chefe.opcional {
-    background-color: #5a5a5a;
-    color: #ddd;
-}
-
-.emblema-chefe.final {
-    background-color: #e0b870;
-    color: #0a0a0a;
-}
+.emblema-chefe.opcional { background-color: #5a5a5a; color: #ddd; }
+.emblema-chefe.final    { background-color: #e0b870; color: #0a0a0a; }
 
 .info-chefe {
     padding: 24px;
@@ -214,7 +190,7 @@
     margin-bottom: 20px;
 }
 
-/* ── ESTATÍSTICAS ── */
+/* ESTATÍSTICAS */
 .estatisticas-chefe {
     margin-bottom: 18px;
 }
@@ -251,7 +227,7 @@
     background-color: #e0c070;
 }
 
-/* ── DROPS ── */
+/* DROPS */
 .drops-chefe {
     display: flex;
     flex-wrap: wrap;
@@ -265,7 +241,7 @@
     color: #7a6040;
 }
 
-/* ── JORNADA ── */
+/* JORNADA */
 .secao-jornada {
     padding: 80px 60px;
     border-top: 1px solid #2a2010;
@@ -291,7 +267,7 @@
     font-style: italic;
 }
 
-/* ── PERFIS ── */
+/* PERFIS */
 .perfis-jornada {
     display: flex;
     align-items: center;
@@ -307,7 +283,6 @@
     flex: 1;
     max-width: 400px;
     text-align: center;
-    transition: border-color 0.3s;
 }
 
 .cartao-perfil:hover {
@@ -367,7 +342,7 @@
     background-color: #2a2218;
 }
 
-/* ── MOMENTOS DA JORNADA ── */
+/* MOMENTOS */
 .momentos-jornada {
     display: flex;
     flex-wrap: wrap;
@@ -380,19 +355,13 @@
     background-color: #100d14;
     border: 1px solid #2a2218;
     padding: 28px 24px;
-    transition: border-color 0.3s;
     flex: 1;
     min-width: 260px;
     max-width: 340px;
 }
 
-.cartao-momento:hover {
-    border-color: #c8a060;
-}
-
-.cartao-momento.destaque {
-    border-color: #5a4a20;
-}
+.cartao-momento:hover  { border-color: #c8a060; }
+.cartao-momento.destaque { border-color: #5a4a20; }
 
 .icone-momento {
     font-size: 32px;
@@ -412,7 +381,7 @@
     color: #8a7a6a;
 }
 
-/* ── FRASE FINAL JORNADA ── */
+/* FRASE FINAL */
 .frase-jornada {
     text-align: center;
     display: flex;
@@ -438,7 +407,7 @@
     flex-shrink: 0;
 }
 
-/* ── LORE ── */
+/* LORE */
 .secao-lore {
     padding: 80px 60px;
     border-top: 1px solid #2a2010;
@@ -462,7 +431,6 @@
     padding: 30px 24px;
     border: 1px solid #2a2218;
     text-align: center;
-    transition: border-color 0.3s;
     flex: 1;
     min-width: 220px;
     max-width: 280px;
@@ -491,7 +459,7 @@
     color: #8a7a6a;
 }
 
-/* ── REGIÕES ── */
+/* REGIÕES */
 .secao-regioes {
     padding: 80px 60px;
     max-width: 1200px;
@@ -508,7 +476,6 @@
     position: relative;
     overflow: hidden;
     cursor: pointer;
-    transition: opacity 0.2s;
     flex: 1;
 }
 
@@ -516,15 +483,12 @@
     opacity: 0.85;
 }
 
-/* ── FOTO DA REGIÃO ── */
-
 .foto-regiao {
     position: absolute;
     inset: 0;
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: center;
     display: block;
 }
 
@@ -554,9 +518,7 @@
     line-height: 1.4;
 }
 
-
-/*SESSÃO DO QUIZ*/
-
+/* QUIZ */
 .secao-quiz {
     padding: 80px 60px;
     border-top: 1px solid #2a2010;
@@ -624,20 +586,6 @@
     margin-bottom: 12px;
 }
 
-.resultado-chefe {
-    font-size: 32px;
-    color: #c8a060;
-    margin-bottom: 16px;
-}
-
-.resultado-descricao {
-    font-size: 15px;
-    line-height: 1.7;
-    color: #8a7a6a;
-    font-style: italic;
-    margin-bottom: 28px;
-}
-
 .resultado-acoes {
     display: flex;
     gap: 16px;
@@ -650,7 +598,7 @@
     color: #5a4a20;
 }
 
-/* ── CTA ── */
+/* CTA */
 .secao-cta {
     padding: 65px 60px;
     text-align: center;

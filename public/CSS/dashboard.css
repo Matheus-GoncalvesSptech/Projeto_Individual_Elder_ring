@@ -78,12 +78,14 @@
     grid-template-columns: 1fr 1fr;
     gap: 28px;
     margin-bottom: 28px;
+   
 }
 
 .card-dash {
     background-color: #100d14;
-    border: 1px solid #2a2218;
+    border: 1px solid #5a4a20;
     padding: 32px;
+     border-radius: 30px;
 }
 
 .card-dash-titulo {

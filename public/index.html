@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Elden Ring — The Lands Between</title>
-    <link rel="stylesheet" href="CSS/index.css">
     <link rel="stylesheet" href="CSS/global.css">
+    <link rel="stylesheet" href="CSS/index.css">
 </head>
 
 <body>
@@ -21,15 +21,16 @@
                 <a href="#home" class="opcoes-menu">Início</a>
                 <a href="#chefes" class="opcoes-menu">Chefes</a>
                 <a href="#jornada" class="opcoes-menu">Minha Jornada</a>
+                <a href="#quiz" class="opcoes-menu">Quiz</a>
                 <a href="sobre.html" class="opcoes-menu">Sobre</a>
                 <a href="calculadora.html" class="opcoes-menu">Runas</a>
-                <a href="login.html" class="opcoes-menu login">Entrar</a>
-
+                <a href="dashboard.html" class="opcoes-menu" id="btn-dashboard" style="display:none">Dashboard</a>
+                <a href="login.html" class="opcoes-menu login" id="btn-login">Entrar</a>
             </div>
         </div>
     </header>
 
-    <!-- HEROI -->
+    <!-- HERO -->
     <section class="container">
         <div class="hero-content">
             <p class="hero-eyebrow">FromSoftware × George R.R. Martin</p>
@@ -65,7 +66,7 @@
             <div class="cartao-chefe">
                 <div class="imagem-chefe-wrap">
                     <img class="foto-chefe" src="imagens/margit_cine.gif" alt="Margit, o Presságio Sombrio">
-                    <span class="dificuldade-chefe"> Médio</span>
+                    <span class="dificuldade-chefe">Médio</span>
                 </div>
                 <div class="info-chefe">
                     <span class="regiao-chefe">Castelo Stormveil</span>
@@ -101,7 +102,7 @@
             <div class="cartao-chefe">
                 <div class="imagem-chefe-wrap">
                     <img class="foto-chefe" src="imagens/godrick_cinematografico.gif" alt="Godrick, o Enxertado">
-                    <span class="dificuldade-chefe dificil"> Difícil</span>
+                    <span class="dificuldade-chefe dificil">Difícil</span>
                     <span class="emblema-chefe">SEMIDEUS</span>
                 </div>
                 <div class="info-chefe">
@@ -137,15 +138,15 @@
 
             <div class="cartao-chefe">
                 <div class="imagem-chefe-wrap">
-                    <img class="foto-chefe" src="imagens\rennala_cinematografico.gif"" alt=" Rennala, Rainha da Lua
-                        Cheia">
+                    <img class="foto-chefe" src="imagens/rennala_cinematografico.gif"
+                        alt="Rennala, Rainha da Lua Cheia">
                     <span class="dificuldade-chefe">Médio</span>
                 </div>
                 <div class="info-chefe">
                     <span class="regiao-chefe">Academia de Raya Lucaria</span>
                     <h3 class="nome-chefe">Rennala, Rainha da Lua Cheia</h3>
                     <p class="descricao-chefe">Ex-líder da Academia e mãe dos semideuses Ranni, Radahn e Rykard. Luta
-                        com magia lunar devastadora e invoca criaturas refeitas pelo seu amor incondicional, além de incocar suas filhas na luta, (apesar da
+                        com magia lunar devastadora e invoca criaturas refeitas pelo seu amor incondicional, (apesar da
                         magia não é tão forte e tem o padrão simples. Mortes: 2).</p>
                     <div class="estatisticas-chefe">
                         <div class="linha-stat"><span class="rotulo-stat">VIDA</span>
@@ -209,7 +210,7 @@
 
             <div class="cartao-chefe">
                 <div class="imagem-chefe-wrap">
-                    <img class="foto-chefe" src="imagens\malenia_cinematografico.gif" alt="Malenia, Lâmina de Miquella">
+                    <img class="foto-chefe" src="imagens/malenia_cinematografico.gif" alt="Malenia, Lâmina de Miquella">
                     <span class="dificuldade-chefe extremo">Extremo</span>
                     <span class="emblema-chefe opcional">OPCIONAL</span>
                 </div>
@@ -218,7 +219,7 @@
                     <h3 class="nome-chefe">Malenia, Lâmina de Miquella</h3>
                     <p class="descricao-chefe">A chefe mais difícil do jogo. Ela restaura Vida a cada golpe que acerta —
                         mesmo se bloqueado. Sua Dança das Pétalas é o ataque mais icônico e letal dos games, (morri mais
-                        de 70 vezes para derrota-lá).</p>
+                        de 70 vezes para derrotá-la).</p>
                     <div class="estatisticas-chefe">
                         <div class="linha-stat"><span class="rotulo-stat">VIDA</span>
                             <div class="barra-stat">
@@ -345,8 +346,6 @@
                 <span class="aspas-decorativas">"</span>
                 <p>Nunca trocaria essa experiência que tive com meu pai por nada. Foi um passatempo que virou memória.
                 </p>
-                <p>PS: No contexto de Elden Ring, “prístino” descreve algo que está no seu estado original, puro e
-                    intacto — antes da decadência do mundo.</p>
                 <span class="aspas-decorativas">"</span>
             </div>
         </div>
@@ -430,11 +429,10 @@
             </div>
         </div>
     </section>
-    
-    <!-- Parte do Quiz -->
+
+    <!-- QUIZ -->
     <section class="secao-quiz" id="quiz">
         <div class="conteudo-quiz">
-
             <div class="cabecalho-secao">
                 <span class="etiqueta-secao">Descubra sua essência</span>
                 <h2 class="titulo-secao">Qual Chefe Você Seria?</h2>
@@ -442,24 +440,31 @@
                     Maculado</p>
             </div>
 
-            <div id="quiz-container">
+            <!-- BOTÃO VER RESULTADO (aparece se já fez o quiz) -->
+            <div id="banner-resultado"
+                style="display:none; background-color:#100d14; border:1px solid #5a4a20; padding:24px 32px; margin-bottom:28px; display:none; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:16px;">
+                <p style="color:#8a7a6a; font-style:italic; margin:0;">Você já descobriu qual chefe seria. Acesse sua
+                    dashboard para ver o resultado!</p>
+                <a href="dashboard.html" class="btn-primario">Ver meu resultado</a>
+            </div>
 
+            <div id="quiz-container">
                 <div class="pergunta-quiz" id="pergunta-0">
                     <p class="numero-pergunta">01 / 06</p>
                     <h3 class="texto-pergunta">Como você lida com seus inimigos?</h3>
                     <div class="opcoes-quiz">
-                        <button class="opcao-quiz" onclick="responder(0, 'Margit')">Com astúcia e paciência — espero
-                            o momento certo para atacar</button>
+                        <button class="opcao-quiz" onclick="responder(0, 'Margit')">Com astúcia e paciência — espero o
+                            momento certo para atacar</button>
                         <button class="opcao-quiz" onclick="responder(0, 'Godrick')">Absorvo o que os outros têm de
                             melhor e uso contra eles</button>
-                        <button class="opcao-quiz" onclick="responder(0, 'Rennala')">Com conhecimento e magia —
-                            poder intelectual é superior à força</button>
+                        <button class="opcao-quiz" onclick="responder(0, 'Rennala')">Com conhecimento e magia — poder
+                            intelectual é superior à força</button>
                         <button class="opcao-quiz" onclick="responder(0, 'Radahn')">De frente, com força bruta e sem
                             hesitar</button>
-                        <button class="opcao-quiz" onclick="responder(0, 'Malenia')">Com precisão absoluta — um
-                            único golpe certeiro resolve tudo</button>
-                        <button class="opcao-quiz" onclick="responder(0, 'Besta Elfica')">Caos puro — ataco de todas
-                            as formas ao mesmo tempo</button>
+                        <button class="opcao-quiz" onclick="responder(0, 'Malenia')">Com precisão absoluta — um único
+                            golpe certeiro resolve tudo</button>
+                        <button class="opcao-quiz" onclick="responder(0, 'Besta Elfica')">Caos puro — ataco de todas as
+                            formas ao mesmo tempo</button>
                     </div>
                 </div>
 
@@ -467,16 +472,16 @@
                     <p class="numero-pergunta">02 / 06</p>
                     <h3 class="texto-pergunta">Qual é sua maior ambição?</h3>
                     <div class="opcoes-quiz">
-                        <button class="opcao-quiz" onclick="responder(1, 'Margit')">Proteger o que considero
-                            sagrado, custe o que custar</button>
+                        <button class="opcao-quiz" onclick="responder(1, 'Margit')">Proteger o que considero sagrado,
+                            custe o que custar</button>
                         <button class="opcao-quiz" onclick="responder(1, 'Godrick')">Ser o mais poderoso, mesmo que
                             precise tomar o poder dos outros</button>
-                        <button class="opcao-quiz" onclick="responder(1, 'Rennala')">Acumular conhecimento e dominar
-                            as artes ocultas</button>
-                        <button class="opcao-quiz" onclick="responder(1, 'Radahn')">Deixar meu nome gravado na
-                            história como o maior guerreiro</button>
-                        <button class="opcao-quiz" onclick="responder(1, 'Malenia')">Superar minha própria limitação
-                            e atingir a perfeição</button>
+                        <button class="opcao-quiz" onclick="responder(1, 'Rennala')">Acumular conhecimento e dominar as
+                            artes ocultas</button>
+                        <button class="opcao-quiz" onclick="responder(1, 'Radahn')">Deixar meu nome gravado na história
+                            como o maior guerreiro</button>
+                        <button class="opcao-quiz" onclick="responder(1, 'Malenia')">Superar minha própria limitação e
+                            atingir a perfeição</button>
                         <button class="opcao-quiz" onclick="responder(1, 'Besta Elfica')">A liberdade total — sem
                             regras, sem correntes</button>
                     </div>
@@ -488,8 +493,8 @@
                     <div class="opcoes-quiz">
                         <button class="opcao-quiz" onclick="responder(2, 'Margit')">Recuo, observo e volto mais
                             preparado</button>
-                        <button class="opcao-quiz" onclick="responder(2, 'Godrick')">Adapto minha estratégia —
-                            incorporo o que o inimigo usou contra mim</button>
+                        <button class="opcao-quiz" onclick="responder(2, 'Godrick')">Adapto minha estratégia — incorporo
+                            o que o inimigo usou contra mim</button>
                         <button class="opcao-quiz" onclick="responder(2, 'Rennala')">Me recolho, estudo onde errei e
                             traço um novo plano</button>
                         <button class="opcao-quiz" onclick="responder(2, 'Radahn')">Levanto e ataco de novo
@@ -509,14 +514,14 @@
                             ocultos</button>
                         <button class="opcao-quiz" onclick="responder(3, 'Godrick')">Um machado descomunal — quanto
                             maior, melhor</button>
-                        <button class="opcao-quiz" onclick="responder(3, 'Rennala')">Grimório de magia — livros são
-                            mais poderosos que espadas</button>
-                        <button class="opcao-quiz" onclick="responder(3, 'Radahn')">Duas espadas colossais, uma em
-                            cada mão</button>
-                        <button class="opcao-quiz" onclick="responder(3, 'Malenia')">Uma katana — velocidade e
-                            precisão acima de tudo</button>
-                        <button class="opcao-quiz" onclick="responder(3, 'Besta Elfica')">Garras, presas, chifres —
-                            meu próprio corpo é minha arma</button>
+                        <button class="opcao-quiz" onclick="responder(3, 'Rennala')">Grimório de magia — livros são mais
+                            poderosos que espadas</button>
+                        <button class="opcao-quiz" onclick="responder(3, 'Radahn')">Duas espadas colossais, uma em cada
+                            mão</button>
+                        <button class="opcao-quiz" onclick="responder(3, 'Malenia')">Uma katana — velocidade e precisão
+                            acima de tudo</button>
+                        <button class="opcao-quiz" onclick="responder(3, 'Besta Elfica')">Garras, presas, chifres — meu
+                            próprio corpo é minha arma</button>
                     </div>
                 </div>
 
@@ -526,10 +531,10 @@
                     <div class="opcoes-quiz">
                         <button class="opcao-quiz" onclick="responder(4, 'Margit')">Sério, calculista e difícil de
                             decifrar</button>
-                        <button class="opcao-quiz" onclick="responder(4, 'Godrick')">Ambicioso, inseguro por dentro
-                            mas imponente por fora</button>
-                        <button class="opcao-quiz" onclick="responder(4, 'Rennala')">Inteligente, apaixonado e às
-                            vezes distante da realidade</button>
+                        <button class="opcao-quiz" onclick="responder(4, 'Godrick')">Ambicioso, inseguro por dentro mas
+                            imponente por fora</button>
+                        <button class="opcao-quiz" onclick="responder(4, 'Rennala')">Inteligente, apaixonado e às vezes
+                            distante da realidade</button>
                         <button class="opcao-quiz" onclick="responder(4, 'Radahn')">Corajoso, intenso e leal até o
                             fim</button>
                         <button class="opcao-quiz" onclick="responder(4, 'Malenia')">Perfeccionista, determinado e
@@ -543,28 +548,26 @@
                     <p class="numero-pergunta">06 / 06</p>
                     <h3 class="texto-pergunta">Qual é seu maior medo?</h3>
                     <div class="opcoes-quiz">
-                        <button class="opcao-quiz" onclick="responder(5, 'Margit')">Falhar em minha missão e deixar
-                            o que protejo cair</button>
-                        <button class="opcao-quiz" onclick="responder(5, 'Godrick')">Ser fraco e insignificante
-                            perante os outros</button>
-                        <button class="opcao-quiz" onclick="responder(5, 'Rennala')">Perder quem amo e não poder
-                            fazer nada</button>
-                        <button class="opcao-quiz" onclick="responder(5, 'Radahn')">Perder minha identidade e não
-                            ser mais quem sou</button>
-                        <button class="opcao-quiz" onclick="responder(5, 'Malenia')">Ser derrotada pela minha
-                            própria maldição interna</button>
-                        <button class="opcao-quiz" onclick="responder(5, 'Besta Elfica')">Ser aprisionado e perder
-                            minha liberdade</button>
+                        <button class="opcao-quiz" onclick="responder(5, 'Margit')">Falhar em minha missão e deixar o
+                            que protejo cair</button>
+                        <button class="opcao-quiz" onclick="responder(5, 'Godrick')">Ser fraco e insignificante perante
+                            os outros</button>
+                        <button class="opcao-quiz" onclick="responder(5, 'Rennala')">Perder quem amo e não poder fazer
+                            nada</button>
+                        <button class="opcao-quiz" onclick="responder(5, 'Radahn')">Perder minha identidade e não ser
+                            mais quem sou</button>
+                        <button class="opcao-quiz" onclick="responder(5, 'Malenia')">Ser derrotada pela minha própria
+                            maldição interna</button>
+                        <button class="opcao-quiz" onclick="responder(5, 'Besta Elfica')">Ser aprisionado e perder minha
+                            liberdade</button>
                     </div>
                 </div>
-
             </div>
 
             <div id="resultado-quiz" style="display:none">
                 <div class="resultado-card">
                     <p class="resultado-label">Você seria...</p>
                     <h2 class="resultado-chefe" id="resultado-nome"></h2>
-                    <p class="resultado-descricao" id="resultado-desc"></p>
                     <div class="resultado-acoes">
                         <button class="btn-primario" onclick="irParaLogin()">Ver na Dashboard</button>
                         <button class="btn-secundario" onclick="reiniciarQuiz()">Refazer Quiz</button>
@@ -573,7 +576,6 @@
                         jogadores</p>
                 </div>
             </div>
-
         </div>
     </section>
 
@@ -586,7 +588,7 @@
             Steam</a>
     </section>
 
-    <!-- RODAPE -->
+    <!-- RODAPÉ -->
     <footer class="rodape" id="rodape">
         <div class="links-rodape">
             <div>
@@ -623,20 +625,10 @@
                 <p class="texto-informacao">Ação RPG, Mundo Aberto</p>
             </div>
         </div>
-
     </footer>
 
     <script>
-        // Objeto que conta quantas vezes cada chefe foi escolhido nas respostas
-        var votos = {
-            'Margit': 0,
-            'Godrick': 0,
-            'Rennala': 0,
-            'Radahn': 0,
-            'Malenia': 0,
-            'Besta Elfica': 0
-        };
-
+        var votos = { 'Margit': 0, 'Godrick': 0, 'Rennala': 0, 'Radahn': 0, 'Malenia': 0, 'Besta Elfica': 0 };
         var perguntaAtual = 0;
         var totalPerguntas = 6;
 
@@ -646,7 +638,7 @@
             'Rennala': 'imagens/rennala_cinematografico.gif',
             'Radahn': 'imagens/radahn_cinematografico.gif',
             'Malenia': 'imagens/malenia_cinematografico.gif',
-            'Besta Elfica': 'imagens/radagon_cinematografico.gif',
+            'Besta Elfica': 'imagens/radagon_cinematografico.gif'
         };
 
         var descricoes = {
@@ -658,29 +650,38 @@
             'Besta Elfica': 'Você é o caos puro — imprevisível, selvagem e impossível de controlar. Você não segue regras porque não reconhece a autoridade de ninguém.'
         };
 
-        // indicePergunta = número da pergunta atual (0 a 5)
-        // chefe = nome do chefe correspondente à opção clicada
+        // Verifica login ao carregar a página
+        window.onload = function () {
+            if (sessionStorage.ID_USUARIO) {
+                // Esconde "Entrar" e mostra "Dashboard"
+                document.getElementById('btn-login').style.display = 'none';
+                document.getElementById('btn-dashboard').style.display = 'block';
+
+                // Se já fez o quiz, mostra o banner de ver resultado
+                fetch('/quiz/usuario/' + sessionStorage.ID_USUARIO).then(function (r) {
+                    return r.json();
+                }).then(function (dados) {
+                    if (dados.length > 0) {
+                        document.getElementById('banner-resultado').style.display = 'flex';
+                        document.getElementById('quiz-container').style.display = 'none';
+                    }
+                }).catch(function () { });
+            }
+        }
+
         function responder(indicePergunta, chefe) {
-
             votos[chefe]++;
-
-            // Calcula qual é a próxima pergunta
             var proxima = indicePergunta + 1;
-
-            // Se ainda tem perguntas, esconde a atual e mostra a próxima
             if (proxima < totalPerguntas) {
                 document.getElementById('pergunta-' + indicePergunta).style.display = 'none';
                 document.getElementById('pergunta-' + proxima).style.display = 'block';
                 perguntaAtual = proxima;
             } else {
-                // Se era a última pergunta, chama a função de resultado
                 mostrarResultado();
             }
         }
 
         function mostrarResultado() {
-
-            // Se não está logado, salva o resultado e redireciona para o login
             if (!sessionStorage.ID_USUARIO) {
                 sessionStorage.setItem('QUIZ_CHEFE', Object.keys(votos).reduce(function (a, b) {
                     return votos[a] >= votos[b] ? a : b;
@@ -690,59 +691,43 @@
                 window.location = 'login.html';
                 return;
             }
-            // Percorre o objeto votos e retorna o chefe com maior número de votos
+
             var chefeVencedor = Object.keys(votos).reduce(function (a, b) {
                 return votos[a] >= votos[b] ? a : b;
             });
 
-            // Salva o resultado no sessionStorage para usar depois do login na dashboard
             sessionStorage.setItem('QUIZ_CHEFE', chefeVencedor);
 
-            // Preenche o nome e a descrição do chefe vencedor na tela
             document.getElementById('resultado-nome').innerHTML =
                 '<img src="' + imagens[chefeVencedor] + '" alt="' + chefeVencedor + '" style="width:100%; max-width:600px; border: 1px solid #2a2218;">' +
                 '<p style="margin-top: 16px; font-size: 20px; color: #c8a060; letter-spacing: 2px;">' + chefeVencedor + '</p>' +
-                '<p style="margin-top: 12px; font-size: 15px; color: #8a7a6a; font-style: Georgia, serif;">' + descricoes[chefeVencedor] + '</p>';
+                '<p style="margin-top: 12px; font-size: 15px; color: #8a7a6a; font-style: italic;">' + descricoes[chefeVencedor] + '</p>';
 
-            // Esconde as perguntas e exibe o card de resultado
             document.getElementById('quiz-container').style.display = 'none';
             document.getElementById('resultado-quiz').style.display = 'block';
         }
 
         function irParaLogin() {
-
-            // Se já está logado, vai direto para a dashboard
             if (sessionStorage.ID_USUARIO) {
                 window.location = 'dashboard.html';
             } else {
-                // Se não está logado, salva um sinalizador e redireciona para o login
-                // Após o login, o login.html lê esse sinalizador e manda para a dashboard
                 sessionStorage.setItem('REDIRECIONAR_DASHBOARD', 'true');
                 window.location = 'login.html';
             }
         }
 
         function reiniciarQuiz() {
-
-            // Zera todos os votos
             votos = { 'Margit': 0, 'Godrick': 0, 'Rennala': 0, 'Radahn': 0, 'Malenia': 0, 'Besta Elfica': 0 };
-
-            // Volta para a primeira pergunta
             perguntaAtual = 0;
-
-            // Esconde o card de resultado e mostra o container de perguntas
             document.getElementById('resultado-quiz').style.display = 'none';
             document.getElementById('quiz-container').style.display = 'block';
-
-            // Mostra a pergunta 0 e esconde todas as outras
             document.getElementById('pergunta-0').style.display = 'block';
             for (var i = 1; i < totalPerguntas; i++) {
                 document.getElementById('pergunta-' + i).style.display = 'none';
             }
         }
-    </script>
 
-    <script>
+        // Scroll suave para links internos
         document.querySelectorAll('a[href^="#"]').forEach(function (link) {
             link.addEventListener('click', function (e) {
                 var alvo = document.querySelector(link.getAttribute('href'));
