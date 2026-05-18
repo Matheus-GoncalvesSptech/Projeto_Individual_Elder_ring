@@ -67,10 +67,12 @@ header {
     color: #eeebe8;
     text-transform: uppercase;
     letter-spacing: 1px;
+    transition: transform 0.3s ease, transform 0.3s ease;
 }
 
 .opcoes-menu:hover {
     color: #c8a060;
+    transform: translateY(-3px);
 }
 
 .opcoes-menu.login {

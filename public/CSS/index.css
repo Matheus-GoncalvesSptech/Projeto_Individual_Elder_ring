@@ -8,17 +8,35 @@
     justify-content: center;
     text-align: center;
     background-color: #080608;
+    background-image: url('../imagens/elden-ring-wallpaper-4k.jpg');
+    background-size: cover;
+    background-position: center top;
+    background-repeat: no-repeat;
     padding: 120px 20px 80px;
+    position: relative;
+}
+
+.container::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        rgba(8, 6, 8, 1.00) 0%,
+        rgba(8, 6, 8, 0.45) 40%,
+        rgba(8, 6, 8, 0.70) 80%,
+        rgba(8, 6, 8, 1.00) 100%
+    );
 }
 
 .hero-content {
     max-width: 700px;
+    position: relative;
 }
 
 .hero-eyebrow {
     font-size: 12px;
     letter-spacing: 4px;
-    color: #7a6040;
+    color: #af9d87;
     text-transform: uppercase;
     margin-bottom: 20px;
 }
@@ -44,7 +62,7 @@
 .hero-subtitulo {
     font-size: 18px;
     font-style: italic;
-    color: #8a7a6a;
+    color: #af9d87;
     line-height: 1.7;
     margin-bottom: 40px;
 }
@@ -54,6 +72,11 @@
     gap: 16px;
     justify-content: center;
     flex-wrap: wrap;
+    transition: transform 0.3s ease;
+}
+
+.botoes-hero:hover {
+    transform: translateY(-7px);
 }
 
 /* CITAÇÃO */
