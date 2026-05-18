@@ -99,21 +99,6 @@
     justify-content: space-between;
 }
 
-/* ── BADGE AO VIVO ── */
-.badge-live {
-    font-size: 10px;
-    letter-spacing: 1px;
-    color: #4a9a4a;
-    border: 1px solid #2a5a2a;
-    padding: 3px 8px;
-    animation: pisca 1.5s infinite;
-}
-
-@keyframes pisca {
-    0%, 100% { opacity: 1; }
-    50%       { opacity: 0.4; }
-}
-
 /* ── GRÁFICO ── */
 .canvas-wrap {
     position: relative;
