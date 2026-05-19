@@ -21,9 +21,9 @@
     position: absolute;
     inset: 0;
     background: linear-gradient(
-        rgba(8, 6, 8, 1.00) 0%,
+        rgba(8, 6, 8, 0.75) 0%,
         rgba(8, 6, 8, 0.45) 40%,
-        rgba(8, 6, 8, 0.70) 80%,
+        rgba(8, 6, 8, 0.45) 80%,
         rgba(8, 6, 8, 1.00) 100%
     );
 }

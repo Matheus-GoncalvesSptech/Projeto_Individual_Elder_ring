@@ -6,6 +6,7 @@
     <title>Elden Ring — Cadastro</title>
     <link rel="stylesheet" href="CSS/global.css">
     <link rel="stylesheet" href="CSS/login_cadastro.css">
+    <link rel="icon" href="imagens/fav_icon_elden_ring.png">
 </head>
 
     <header>
@@ -18,7 +19,7 @@
                 <a href="index.html" class="opcoes-menu">Início</a>
                 <a href="index.html#chefes" class="opcoes-menu">Chefes</a>
                 <a href="sobre.html" class="opcoes-menu">Sobre</a>
-                <a href="calculadora.html" class="opcoes-menu">Runas</a>
+                <a href="runas.html" class="opcoes-menu">Runas</a>
                 <a href="login.html" class="opcoes-menu login">Entrar</a>
             </div>
         </div>
@@ -90,11 +91,11 @@
             if (senha == '') {
                 aviso.innerHTML = '';
             } else if (senha.length < 6) {
-                aviso.innerHTML = '<span style="color:#c03020">⚠ Senha fraca — mínimo 6 caracteres</span>';
+                aviso.innerHTML = '<span style="color:#c03020">Senha fraca — mínimo 6 caracteres</span>';
             } else if (senha.length < 10) {
-                aviso.innerHTML = '<span style="color:#e07030">~ Senha média</span>';
+                aviso.innerHTML = '<span style="color:#e07030">Senha média</span>';
             } else {
-                aviso.innerHTML = '<span style="color:#7ab87a">✓ Senha forte</span>';
+                aviso.innerHTML = '<span style="color:#7ab87a">Senha forte</span>';
             }
         }
 
@@ -120,7 +121,7 @@
             if (erros.length > 0) {
                 cardErro.style.display = "block";
                 mensagem_erro.innerHTML = erros.join("<br>");
-                setInterval(sumirMensagem, 7000);
+                setInterval(sumirMensagem, 5000);
                 return false;
             }
 
